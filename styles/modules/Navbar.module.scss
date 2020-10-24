@@ -1,22 +1,15 @@
 @import "../variables";
 
-.navbar {
+.navbar_ilumination {
   width: 90%;
   margin: 0 auto;
   height: 4rem;
   display: flex;
   justify-content: center;
   align-items: center;
-
-  position: relative;
+  position: fixed;
   bottom: 0;
-  background-color: black;
-  // border-radius: 5rem 5rem 0 0;
   z-index: 1;
-  // border-top: 4px solid;
-  // border-radius: 50%;
-  // border-image-slice: 1;
-  // border-image-source: linear-gradient(to right, $primary, $secundary);
   li {
     list-style: none;
   }
@@ -25,8 +18,8 @@
     content: "";
     position: absolute;
     top: -4px;
-    left: 10px;
-    // border-radius: 5rem 5rem 0 0;
+    left: 0;
+    border-radius: 1.5rem 1.5rem 0 0;
     background: linear-gradient(
       45deg,
       $primary,
@@ -36,52 +29,83 @@
       $primary,
       $secundary
     );
-    background-size: 430%;
-    width: calc(100% - 20px);
-    height: calc(100% + 4px);
+    background-size: 400%;
+    width: 100%;
+    height: calc(100% + 10px);
     z-index: -1;
+    animation: neon-nav 30s linear infinite alternate;
   }
   &:after {
-    filter: blur(10px);
+    filter: blur(6px);
     z-index: -2;
   }
-  .main {
+  .navbar {
+    width: calc(100% - 15px);
+    background: $bg-dark;
+    position: relative;
+    border-radius: 1rem 1rem 0 0;
     display: flex;
-    justify-content: space-around;
+    justify-content: center;
     align-items: center;
-    color: $copper;
-    padding: 0;
-    .item {
-      padding: 0.75rem;
+    &::before {
+      content: "";
+      position: absolute;
+      height: 80%;
+      width: calc(100% + 50px);
+      bottom: -5px;
+      left: -25px;
+      z-index: -1;
+      background: $bg-dark;
+    }
+    .main {
+      width: 90%;
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      color: $copper;
+      padding: 0;
+      margin: 0;
+      .item {
+        padding: 0.75rem;
+        svg {
+          fill: currentColor;
+          height: 1.75rem;
+        }
+      }
+    }
+
+    .social {
+      padding: 0;
+      display: none;
       svg {
+        width: 1.5rem;
         fill: currentColor;
-        height: 1.75rem;
+      }
+      .item {
+        padding: 0.4rem;
+      }
+      .facebook,
+      .linkedin {
+        color: #0a8af9;
+      }
+      .github {
+        color: white;
+      }
+      .instagram {
+        color: #e55be0;
+      }
+      .twitter {
+        color: #23e4eb;
       }
     }
   }
+}
 
-  .social {
-    padding: 0;
-    display: none;
-    svg {
-      width: 1.5rem;
-      fill: currentColor;
-    }
-    .item {
-      padding: 0.4rem;
-    }
-    .facebook,
-    .linkedin {
-      color: #0a8af9;
-    }
-    .github {
-      color: white;
-    }
-    .instagram {
-      color: #e55be0;
-    }
-    .twitter {
-      color: #23e4eb;
-    }
+@keyframes neon-nav {
+  0% {
+    background-position: 0 0;
+  }
+  100% {
+    background-position: 400% 0;
   }
 }
