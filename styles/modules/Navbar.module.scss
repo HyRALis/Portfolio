@@ -31,9 +31,9 @@
     );
     background-size: 400%;
     width: 100%;
-    height: calc(100% + 10px);
+    height: calc(40% + 10px);
     z-index: -1;
-    animation: neon-nav 30s linear infinite alternate;
+    animation: neon-nav-sm 40s linear infinite alternate;
   }
   &:after {
     filter: blur(6px);
@@ -47,18 +47,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    &::before {
-      content: "";
-      position: absolute;
-      height: 80%;
-      width: calc(100% + 50px);
-      bottom: -5px;
-      left: -25px;
-      z-index: -1;
-      background: $bg-dark;
-    }
     .main {
-      width: 90%;
       display: flex;
       justify-content: space-around;
       align-items: center;
@@ -78,7 +67,7 @@
       padding: 0;
       display: none;
       svg {
-        width: 1.5rem;
+        width: 1.25rem;
         fill: currentColor;
       }
       .item {
@@ -101,11 +90,73 @@
   }
 }
 
-@keyframes neon-nav {
+@media (min-width: $break-md) {
+  .navbar_ilumination {
+    height: 95%;
+    width: 9rem;
+    margin: auto 0;
+    left: 0;
+    bottom: auto;
+    &::before,
+    &::after {
+      top: 0;
+      right: -8px;
+      left: auto;
+      border-radius: 0 2.5rem 2.5rem 0;
+      background: linear-gradient(
+        45%,
+        $primary,
+        $secundary,
+        $primary,
+        $secundary,
+        $primary,
+        $secundary
+      );
+      background-size: 800%;
+      width: calc(30% + 10px);
+      height: 100%;
+      animation: neon-nav-lg 60s linear infinite alternate;
+    }
+    .navbar {
+      height: calc(100% - 15px);
+      width: 9rem;
+      position: relative;
+      flex-direction: column;
+      border-radius: 0 2rem 2rem 0;
+      .main {
+        flex-direction: column;
+        .item {
+          padding: 0.6rem 0;
+          svg {
+            fill: currentColor;
+            height: 2rem;
+          }
+        }
+      }
+      .social {
+        display: initial;
+        margin: 0;
+        position: absolute;
+        bottom: 0;
+      }
+    }
+  }
+}
+
+@keyframes neon-nav-sm {
   0% {
     background-position: 0 0;
   }
   100% {
     background-position: 400% 0;
+  }
+}
+
+@keyframes neon-nav-lg {
+  0% {
+    background-position: 40% 0;
+  }
+  100% {
+    background-position: 750% 0;
   }
 }

@@ -3,12 +3,15 @@ import { motion } from "framer-motion";
 
 import {} from "../animationVariants";
 
-const MailSvg = ({ fill, height, width }) => {
+const MailSvg = ({ fill, height, width, Variant, Initial, Animate }) => {
   return (
     <motion.svg
       fill={fill}
       height={height}
       width={width}
+      variants={Variant}
+      initial={Initial}
+      animate={Animate}
       viewBox="0 -51 386.00003 386"
       xmlns="http://www.w3.org/2000/svg"
     >

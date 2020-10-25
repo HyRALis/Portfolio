@@ -1,14 +1,15 @@
 import React from "react";
 import { motion } from "framer-motion";
 
-import {} from "../animationVariants";
-
-const HouseSvg = ({ fill, height, width }) => {
+const HouseSvg = ({ fill, height, width, Variant, Initial, Animate }) => {
   return (
     <motion.svg
       fill={fill}
       height={height}
       width={width}
+      variants={Variant}
+      initial={Initial}
+      animate={Animate}
       version="1.1"
       id="Capa_1"
       xmlns="http://www.w3.org/2000/svg"
@@ -16,7 +17,7 @@ const HouseSvg = ({ fill, height, width }) => {
       x="0px"
       y="0px"
       viewBox="0 0 336.054 336.054"
-      style="enable-background:new 0 0 336.054 336.054;"
+      enableBackground="new 0 0 336.054 336.054"
       xmlSpace="preserve"
     >
       <g>

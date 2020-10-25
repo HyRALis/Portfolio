@@ -3,14 +3,17 @@ import { motion } from "framer-motion";
 
 import {} from "../animationVariants";
 
-const ProjetsSvg = ({ fill, width, height }) => {
+const ProjetsSvg = ({ fill, width, height, Variant, Initial, Animate }) => {
   return (
     <motion.svg
       fill={fill}
       width={width}
       height={height}
+      variants={Variant}
+      initial={Initial}
+      animate={Animate}
       id="Layer_1"
-      enable-background="new 0 0 512 512"
+      enableBackground="new 0 0 512 512"
       viewBox="0 0 512 512"
       xmlns="http://www.w3.org/2000/svg"
     >

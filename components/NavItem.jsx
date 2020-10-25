@@ -1,4 +1,5 @@
 import React from "react";
+import { motion } from "framer-motion";
 
 import styles from "../styles/modules/Navbar.module.scss";
 
@@ -12,40 +13,40 @@ import FacebookSvg from "./svg/FacebookSvg";
 import InstagramSvg from "./svg/InstagramSvg";
 import TwitterSvg from "./svg/TwitterSvg";
 
-const NavItem = ({ svg }) => {
+const NavItem = ({ Svg, Variant, Initial, Animate }) => {
   {
-    switch (svg) {
+    switch (Svg) {
       case "Home":
         return (
-          <li className={styles.item}>
+          <motion.li className={styles.item} variants={Variant}>
             <a href="">
               <HomeSvg />
             </a>
-          </li>
+          </motion.li>
         );
       case "About":
         return (
-          <li className={styles.item}>
+          <motion.li className={styles.item} variants={Variant}>
             <a href="">
               <AboutSvg />
             </a>
-          </li>
+          </motion.li>
         );
       case "Projets":
         return (
-          <li className={styles.item}>
+          <motion.li className={styles.item} variants={Variant}>
             <a href="">
               <ProjetsSvg />
             </a>
-          </li>
+          </motion.li>
         );
       case "Mail":
         return (
-          <li className={styles.item}>
+          <motion.li className={styles.item} variants={Variant}>
             <a href="">
               <MailSvg />
             </a>
-          </li>
+          </motion.li>
         );
       case "LinkedIn":
         return (

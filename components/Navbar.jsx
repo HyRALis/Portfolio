@@ -5,25 +5,39 @@ import NavItem from "../components/NavItem";
 
 import styles from "../styles/modules/Navbar.module.scss";
 
-export const Navbar = () => {
+import {
+  navbarVariantSm,
+  navbarVariantLg,
+  navItemVariant,
+} from "./animationVariants";
+
+export const Navbar = ({ width }) => {
   return (
-    <div className={styles.navbar_ilumination}>
-      <div className={styles.navbar}>
-        <ul className={styles.main}>
-          <NavItem svg="Home" />
-          <NavItem svg="About" />
-          <NavItem svg="Projets" />
-          <NavItem svg="Mail" />
-        </ul>
-        <ul className={styles.social}>
-          <NavItem svg="LinkedIn" />
-          <NavItem svg="Github" />
-          <NavItem svg="Facebook" />
-          <NavItem svg="Instagram" />
-          <NavItem svg="Twitter" />
-        </ul>
-      </div>
-    </div>
+    width !== null && (
+      <motion.div
+        className={styles.navbar_ilumination}
+        variants={width < 879 ? navbarVariantSm : navbarVariantLg}
+        initial="initial"
+        animate="dom"
+        exit="initial"
+      >
+        <div className={styles.navbar}>
+          <ul className={styles.main}>
+            <NavItem Svg="Home" Variant={navItemVariant} />
+            <NavItem Svg="About" Variant={navItemVariant} />
+            <NavItem Svg="Projets" Variant={navItemVariant} />
+            <NavItem Svg="Mail" Variant={navItemVariant} />
+          </ul>
+          <motion.ul className={styles.social} variants={navItemVariant}>
+            <NavItem Svg="LinkedIn" />
+            <NavItem Svg="Github" />
+            <NavItem Svg="Facebook" />
+            <NavItem Svg="Instagram" />
+            <NavItem Svg="Twitter" />
+          </motion.ul>
+        </div>
+      </motion.div>
+    )
   );
 };
 

@@ -3,12 +3,15 @@ import { motion } from "framer-motion";
 
 import {} from "../animationVariants";
 
-const PersonSvg = ({ fill, width, height }) => {
+const PersonSvg = ({ fill, width, height, Variant, Initial, Animate }) => {
   return (
-    <motion.svg
+    <svg
       fill={fill}
       width={width}
       height={height}
+      variants={Variant}
+      initial={Initial}
+      animate={Animate}
       version="1.1"
       id="Capa_1"
       xmlns="http://www.w3.org/2000/svg"
@@ -16,7 +19,7 @@ const PersonSvg = ({ fill, width, height }) => {
       x="0px"
       y="0px"
       viewBox="0 0 792 792"
-      style="enable-background:new 0 0 792 792;"
+      enableBackground="new 0 0 792 792"
       xmlSpace="preserve"
     >
       <g>
@@ -31,7 +34,7 @@ const PersonSvg = ({ fill, width, height }) => {
           </g>
         </g>
       </g>
-    </motion.svg>
+    </svg>
   );
 };
 
