@@ -9,13 +9,9 @@ import {
   pinPaths,
 } from "../animationVariants";
 
-const PatternHome = ({ height }) => {
+const PatternHome = () => {
   return (
-    <svg
-      xmlns="http://www.w3.org/2000/svg"
-      viewBox="0 0 894.435 618.861"
-      height={height}
-    >
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 894.435 618.861">
       <g
         id="Group_26"
         data-name="Group 26"

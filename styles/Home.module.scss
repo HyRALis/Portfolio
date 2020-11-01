@@ -1,21 +1,54 @@
+@import "./variables.scss";
+
 .container {
-  min-height: calc(100vh - 5rem);
+  position: relative;
+  height: calc(100vh - 5rem);
   padding: 0 0.5rem;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background-color: #25283d;
-  margin-bottom: 5rem;
+  background-color: $bg-dark;
+  margin: 0 0 5rem 0;
 }
 .main {
+  padding: 0 1rem;
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: flex-start;
+  align-items: flex-start;
+  justify-content: center;
+  svg {
+    align-self: flex-end;
+    height: 45%;
+  }
 }
 .content {
   h3 {
-    padding-top: 25%;
+    padding-top: 15%;
   }
 }
+
+@media (min-width: $break-md) {
+  .container {
+    padding: 0.5rem 0;
+    width: calc(100vw - 9rem);
+    height: 100%;
+    margin: 0 0 0 9rem;
+    align-items: center;
+    justify-content: center;
+  }
+  .main {
+    position: relative;
+    width: 90%;
+    height: 92%;
+    align-items: flex-start;
+    justify-content: center;
+    svg {
+      position: absolute;
+      top: 0;
+      right: 0;
+      width: 70%;
+      height: initial;
+    }
+  }
+} ;

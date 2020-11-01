@@ -23,7 +23,7 @@ export const navbarVariantLg = {
     opacity: 0,
   },
   dom: {
-    height: "95%",
+    height: "92%",
     opacity: 1,
     transition: {
       delay: 0.1,

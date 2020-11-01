@@ -32,7 +32,7 @@ export default function Home() {
       </Head>
       {/* <Navbar width={windowWidth} /> */}
       <main className={styles.main}>
-        <PatternHome height={"45%"} />
+        <PatternHome />
         <div className={styles.content}>
           <motion.h1>Petar</motion.h1>
           <motion.h2>Trajanoski</motion.h2>
