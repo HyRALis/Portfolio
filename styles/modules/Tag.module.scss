@@ -1,0 +1,16 @@
+@import "../variables.scss";
+
+.tag {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-shrink: 0;
+  font-size: 0.875rem;
+  font-weight: 700;
+  color: $copper;
+  border: 3px solid;
+  border-radius: 25px;
+  padding: 0.25rem 1rem;
+  width: max-content;
+  margin: 0 0.5rem 0.5rem 0;
+}
