@@ -53,76 +53,66 @@ export const navItemVariant = {
     },
   },
 };
+
 // Animations for the pattern svgs
-export const linePathsBlue = {
+
+const defaultPathVariant = {
   initial: {
     opacity: 0,
     pathLength: 0,
-    fill: "rgba(7, 190, 184, 0)",
   },
   dom: {
     opacity: 1,
     pathLength: 1,
-    fill: "rgba(7, 190, 184, 1)",
     transition: {
       delay: 0.1,
       duration: 1.3,
       ease: "easeInOut",
     },
+  },
+};
+
+export const linePathsBlue = {
+  initial: {
+    ...defaultPathVariant.initial,
+    fill: "rgba(7, 190, 184, 0)",
+  },
+  dom: {
+    ...defaultPathVariant.dom,
+    fill: "rgba(7, 190, 184, 1)",
   },
 };
 
 export const linePathsPurple = {
   initial: {
-    opacity: 0,
-    pathLength: 0,
+    ...defaultPathVariant.initial,
     fill: "rgba(203, 72, 183, 0)",
   },
   dom: {
-    opacity: 1,
-    pathLength: 1,
+    ...defaultPathVariant.dom,
     fill: "rgba(203, 72, 183, 1)",
-    transition: {
-      delay: 0.1,
-      duration: 1.3,
-      ease: "easeInOut",
-    },
   },
 };
 
 export const linePathsLightBlue = {
   initial: {
-    opacity: 0,
-    pathLength: 0,
+    ...defaultPathVariant.initial,
     fill: "rgba(152, 223, 234, 0)",
   },
   dom: {
-    opacity: 1,
-    pathLength: 1,
+    ...defaultPathVariant.dom,
     fill: "rgba(152, 223, 234, 1)",
-    transition: {
-      delay: 0.1,
-      duration: 1.3,
-      ease: "easeInOut",
-    },
   },
 };
 
 export const linePathsCopper = {
   initial: {
-    opacity: 0,
-    pathLength: 0,
+    ...defaultPathVariant.initial,
     fill: "rgba(230, 199, 156, 0)",
   },
   dom: {
-    opacity: 1,
-    pathLength: 1,
+    ...defaultPathVariant.dom,
     fill: "rgba(230, 199, 156, 1)",
-    transition: {
-      delay: 0.1,
-      duration: 1.3,
-      ease: "easeInOut",
-    },
   },
 };
 
@@ -135,9 +125,40 @@ export const pinPaths = {
     opacity: 1,
     // scale: 1,
     transition: {
-      delay: 2.1,
+      delay: 1.1,
       duration: 1,
       ease: "easeInOut",
+    },
+  },
+};
+
+//Tag animation
+export const tagStagger = {
+  initial: {
+    opacity: 0,
+  },
+  dom: {
+    opacity: 1,
+    transition: {
+      when: "beforeChildren",
+      staggerChildren: 0.2,
+      delay: 1,
+    },
+  },
+};
+
+export const tagVariant = {
+  initial: {
+    opacity: 0,
+    scale: 0,
+    transformOrigin: "50% 50%",
+  },
+  dom: {
+    opacity: 1,
+    scale: 1,
+    transition: {
+      type: "spring",
+      bounce: 0.35,
     },
   },
 };
