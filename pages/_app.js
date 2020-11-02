@@ -21,8 +21,8 @@ function MyApp({ Component, pageProps }) {
 
   return (
     <Fragment>
-      <Navbar width={windowWidth} />
-      <Component {...pageProps} />
+      <Navbar Width={windowWidth} />
+      <Component {...pageProps} Width={windowWidth} />
     </Fragment>
   );
 }

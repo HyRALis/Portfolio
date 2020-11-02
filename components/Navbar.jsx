@@ -11,12 +11,12 @@ import {
   navItemVariant,
 } from "./animationVariants";
 
-export const Navbar = ({ width }) => {
+export const Navbar = ({ Width }) => {
   return (
-    width !== null && (
+    Width !== null && (
       <motion.div
         className={styles.navbar_ilumination}
-        variants={width < 879 ? navbarVariantSm : navbarVariantLg}
+        variants={Width < 879 ? navbarVariantSm : navbarVariantLg}
         initial="initial"
         animate="dom"
         exit="initial"
