@@ -1,7 +1,5 @@
-import { useState, useEffect } from "react";
 import Head from "next/head";
 
-import Navbar from "../components/Navbar";
 import PatternHome from "../components/svg/PatternHome";
 
 import styles from "../styles/modules/Home.module.scss";
@@ -14,7 +12,6 @@ export default function Home() {
         <title>Petar T. Portfolio</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      {/* <Navbar width={windowWidth} /> */}
       <main className={styles.main}>
         <PatternHome />
         <div className={styles.content}>

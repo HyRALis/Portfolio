@@ -1,3 +1,4 @@
+import { AnimatePresence } from "framer-motion";
 import { useState, useEffect, Fragment } from "react";
 
 import Navbar from "../components/Navbar";
@@ -22,7 +23,9 @@ function MyApp({ Component, pageProps }) {
   return (
     <Fragment>
       <Navbar Width={windowWidth} />
-      <Component {...pageProps} Width={windowWidth} />
+      <AnimatePresence exitBeforeEnter>
+        <Component {...pageProps} Width={windowWidth} />
+      </AnimatePresence>
     </Fragment>
   );
 }

@@ -1,4 +1,4 @@
-import React from "react";
+import Link from "next/link";
 import { motion } from "framer-motion";
 
 import styles from "../styles/modules/Navbar.module.scss";
@@ -19,39 +19,50 @@ const NavItem = ({ Svg, Variant, Initial, Animate }) => {
       case "Home":
         return (
           <motion.li className={styles.item} variants={Variant}>
-            <a href="">
-              <HomeSvg />
-            </a>
+            <Link aria-label="Home" href="/">
+              <a>
+                <HomeSvg />
+              </a>
+            </Link>
           </motion.li>
         );
       case "About":
         return (
           <motion.li className={styles.item} variants={Variant}>
-            <a href="">
-              <AboutSvg />
-            </a>
+            <Link aria-label="About me" href="/about">
+              <a>
+                <AboutSvg />
+              </a>
+            </Link>
           </motion.li>
         );
       case "Projets":
         return (
           <motion.li className={styles.item} variants={Variant}>
-            <a href="">
-              <ProjetsSvg />
-            </a>
+            <Link aria-label="My projets" href="/projets">
+              <a>
+                <ProjetsSvg />
+              </a>
+            </Link>
           </motion.li>
         );
       case "Mail":
         return (
           <motion.li className={styles.item} variants={Variant}>
-            <a href="">
-              <MailSvg />
-            </a>
+            <Link aria-label="Get in touch" href="/contact">
+              <a>
+                <MailSvg />
+              </a>
+            </Link>
           </motion.li>
         );
       case "LinkedIn":
         return (
           <li className={`${styles.item} ${styles.linkedin}`}>
-            <a href="">
+            <a
+              aria-label="Petar's LinkedIn"
+              href="https://www.linkedin.com/in/petar-trajanoski-464aa8b6/"
+            >
               <LinkedInSvg />{" "}
             </a>
           </li>
@@ -59,7 +70,7 @@ const NavItem = ({ Svg, Variant, Initial, Animate }) => {
       case "Github":
         return (
           <li className={`${styles.item} ${styles.github}`}>
-            <a href="">
+            <a aria-label="Petar's GitHub" href="https://github.com/HyRALis">
               <GithubSvg />
             </a>
           </li>
@@ -67,7 +78,10 @@ const NavItem = ({ Svg, Variant, Initial, Animate }) => {
       case "Facebook":
         return (
           <li className={`${styles.item} ${styles.facebook}`}>
-            <a href="">
+            <a
+              aria-label="Petar's Facebook"
+              href="https://www.facebook.com/petar.trajanoski/"
+            >
               <FacebookSvg />
             </a>
           </li>
@@ -75,7 +89,7 @@ const NavItem = ({ Svg, Variant, Initial, Animate }) => {
       case "Instagram":
         return (
           <li className={`${styles.item} ${styles.instagram}`}>
-            <a href="">
+            <a aria-label="Petar's Instagram" href="">
               <InstagramSvg />
             </a>
           </li>
@@ -83,7 +97,10 @@ const NavItem = ({ Svg, Variant, Initial, Animate }) => {
       case "Twitter":
         return (
           <li className={`${styles.item} ${styles.twitter}`}>
-            <a href="">
+            <a
+              aria-label="Petar's Twitter"
+              href="https://twitter.com/Kriticarot"
+            >
               <TwitterSvg />
             </a>
           </li>
@@ -91,7 +108,7 @@ const NavItem = ({ Svg, Variant, Initial, Animate }) => {
       default:
         return (
           <li className={styles.item}>
-            <a href="">
+            <a aria-label="Home" href="">
               <HomeSvg />
             </a>
           </li>
