@@ -61,6 +61,7 @@ const NavItem = ({ Svg, Variant, Initial, Animate }) => {
           <li className={`${styles.item} ${styles.linkedin}`}>
             <a
               aria-label="Petar's LinkedIn"
+              target="_blank"
               href="https://www.linkedin.com/in/petar-trajanoski-464aa8b6/"
             >
               <LinkedInSvg />{" "}
@@ -70,7 +71,11 @@ const NavItem = ({ Svg, Variant, Initial, Animate }) => {
       case "Github":
         return (
           <li className={`${styles.item} ${styles.github}`}>
-            <a aria-label="Petar's GitHub" href="https://github.com/HyRALis">
+            <a
+              target="_blank"
+              aria-label="Petar's GitHub"
+              href="https://github.com/HyRALis"
+            >
               <GithubSvg />
             </a>
           </li>
@@ -79,6 +84,7 @@ const NavItem = ({ Svg, Variant, Initial, Animate }) => {
         return (
           <li className={`${styles.item} ${styles.facebook}`}>
             <a
+              target="_blank"
               aria-label="Petar's Facebook"
               href="https://www.facebook.com/petar.trajanoski/"
             >
@@ -89,7 +95,11 @@ const NavItem = ({ Svg, Variant, Initial, Animate }) => {
       case "Instagram":
         return (
           <li className={`${styles.item} ${styles.instagram}`}>
-            <a aria-label="Petar's Instagram" href="">
+            <a
+              target="_blank"
+              aria-label="Petar's Instagram"
+              href="https://www.instagram.com/p.trajanoski/"
+            >
               <InstagramSvg />
             </a>
           </li>
@@ -98,6 +108,7 @@ const NavItem = ({ Svg, Variant, Initial, Animate }) => {
         return (
           <li className={`${styles.item} ${styles.twitter}`}>
             <a
+              target="_blank"
               aria-label="Petar's Twitter"
               href="https://twitter.com/Kriticarot"
             >
@@ -108,7 +119,7 @@ const NavItem = ({ Svg, Variant, Initial, Animate }) => {
       default:
         return (
           <li className={styles.item}>
-            <a aria-label="Home" href="">
+            <a target="_blank" aria-label="Home" href="">
               <HomeSvg />
             </a>
           </li>
