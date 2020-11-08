@@ -4,6 +4,7 @@ import PatternHome from "../components/svg/PatternHome";
 
 import styles from "../styles/modules/Home.module.scss";
 import { motion } from "framer-motion";
+import { slowFadePop, Stagger } from "../components/animationVariants";
 
 export default function Home() {
   return (
@@ -12,14 +13,22 @@ export default function Home() {
         <title>Petar T. Portfolio</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <main className={styles.main}>
-        <PatternHome />
+      <motion.main
+        className={styles.main}
+        variants={Stagger}
+        initial="initial"
+        animate="dom"
+        exit="initial"
+      >
         <div className={styles.content}>
-          <motion.h1>Petar</motion.h1>
-          <motion.h2>Trajanoski</motion.h2>
-          <motion.h3>Front-end developer & UI designer</motion.h3>
+          <motion.h1 variants={slowFadePop}>Petar</motion.h1>
+          <motion.h2 variants={slowFadePop}>Trajanoski</motion.h2>
+          <motion.h3 variants={slowFadePop}>
+            Front-end developer & UI designer
+          </motion.h3>
         </div>
-      </main>
+        <PatternHome />
+      </motion.main>
     </div>
   );
 }

@@ -133,7 +133,7 @@ export const pinPaths = {
 };
 
 //Tag animation
-export const tagStagger = {
+export const Stagger = {
   initial: {
     opacity: 0,
   },
@@ -159,6 +159,25 @@ export const tagVariant = {
     transition: {
       type: "spring",
       bounce: 0.35,
+    },
+  },
+};
+
+// General animations
+
+export const slowFadePop = {
+  initial: {
+    opacity: 0,
+    scale: 0,
+  },
+  dom: {
+    opacity: 1,
+    scale: 1,
+    transition: {
+      type: "spring",
+      damping: 20,
+      mass: 2,
+      stiffness: 50,
     },
   },
 };

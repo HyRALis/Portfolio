@@ -4,7 +4,11 @@ import Image from "next/image";
 import Head from "next/head";
 
 import styles from "../styles/modules/About.module.scss";
-import { tagStagger } from "../components/animationVariants";
+import {
+  slowFadePop,
+  Stagger,
+  tagVariant,
+} from "../components/animationVariants";
 import PatternAbout from "../components/svg/PatternAbout";
 
 const About = ({ Width }) => {
@@ -16,8 +20,14 @@ const About = ({ Width }) => {
       </Head>
       <main className={styles.main}>
         <h1>About</h1>
-        <section className={styles.aboutLanding}>
-          <div className={styles.heroImage}>
+        <motion.section
+          className={styles.aboutLanding}
+          variants={Stagger}
+          initial="initial"
+          animate="dom"
+          exit="initial"
+        >
+          <motion.div className={styles.heroImage} variants={slowFadePop}>
             <Image
               src="/assets/images/my_image.jpg"
               alt="Petar Trajanoski's Picture"
@@ -25,7 +35,7 @@ const About = ({ Width }) => {
               priority={true}
               layout="fill"
             />
-          </div>
+          </motion.div>
           <motion.div className={styles.content}>
             <h3>Excepteur sint occaeuiecat.</h3>
             <p>
@@ -37,7 +47,7 @@ const About = ({ Width }) => {
             </p>
             <motion.div
               className={styles.tagsContainer}
-              variants={tagStagger}
+              variants={Stagger}
               initial="initial"
               animate="dom"
             >
@@ -52,7 +62,7 @@ const About = ({ Width }) => {
             </motion.div>
             <PatternAbout />
           </motion.div>
-        </section>
+        </motion.section>
       </main>
     </div>
   );
