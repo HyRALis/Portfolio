@@ -1,4 +1,4 @@
-import { WorkExperienceCard } from '@/components/ui/WorkExperienceCard';
+import { WorkExperienceCard } from '@/components/ui/sections/WorkExperience/WorkExperienceCard';
 
 export const workExperience = [
     {

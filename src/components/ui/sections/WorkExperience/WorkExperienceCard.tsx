@@ -20,7 +20,7 @@ export interface WorkExperienceListProps {
 
 export const WorkExperienceList: React.FC<WorkExperienceListProps> = ({ items }) => {
     return (
-        <ul className="flex flex-col space-y-4 max-w-md text-gray-500 list-inside dark:text-gray-400">
+        <ul className="flex flex-col space-y-4 text-gray-500 list-inside dark:text-gray-400">
             {items.map((listItem, index) => (
                 <li key={`WorkExperienceListItem-${index}`} className="flex items-center space-x-2 flex-1">
                     <GreenCircleWithCheckmark svgProps={{ width: '20px', height: '20px', style: { flexShrink: 0 } }} />
