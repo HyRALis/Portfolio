@@ -6,7 +6,7 @@ import { GradientText } from '../../GradientText';
 
 export const WorkExperience = () => {
     return (
-        <Section>
+        <Section className="space-y-10">
             <GradientText text="Work Experience" />
             <Timeline data={workExperience} />
         </Section>

@@ -7,7 +7,7 @@ import { testimonials } from '@/utils/constants/testimonials';
 
 export const Testimonials = () => {
     return (
-        <Section>
+        <Section className="space-y-10">
             <GradientText text="Testimonials" />
             <AnimatedTestimonials testimonials={testimonials} />
         </Section>
