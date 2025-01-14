@@ -4,8 +4,7 @@ import { WorkExperience } from '@/components/ui/sections/WorkExperience/WorkExpe
 
 export default function Home() {
     return (
-        <main className="flex flex-col space-y-32">
-            <h2 className="text-4xl sm:text-5xl font-bold text-center">Hello world</h2>
+        <main className="flex flex-col justify-center space-y-32">
             <Skills />
             <WorkExperience />
             <Testimonials />

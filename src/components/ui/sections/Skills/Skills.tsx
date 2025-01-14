@@ -1,7 +1,6 @@
 import React from 'react';
 
 import { Section } from '../../Section';
-import { GradientText } from '../../GradientText';
 import { AnimatedCardsHover } from './AnimatedCardsHover';
 import { skills } from '@/utils/constants/skills';
 import { SkillsCard } from './SkillsCard';
@@ -26,7 +25,6 @@ export const Skills = () => {
 
     return (
         <Section>
-            <GradientText text="Skills" />
             <AnimatedCardsHover items={skillCards} className="grid-cols-2 md:grid-cols-4  lg:grid-cols-8" />
         </Section>
     );
