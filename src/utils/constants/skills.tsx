@@ -1,17 +1,17 @@
-import { Bootstrap } from '@/icons/Bootstrap';
-import { ChakraUi } from '@/icons/ChakraUi';
-import { Css } from '@/icons/Css';
-import { Html } from '@/icons/Html';
-import { JavaScript } from '@/icons/JavaScript';
-import { Next } from '@/icons/Next';
-import { Nuxt } from '@/icons/Nuxt';
-import { ReactIcon } from '@/icons/ReactIcon';
-import { Redux } from '@/icons/Redux';
-import { Sass } from '@/icons/Sass';
-import { Tailwind } from '@/icons/Tailwind';
-import { TypeScript } from '@/icons/TypeScript';
-import { VueJs } from '@/icons/VueJs';
-import { Vuex } from '@/icons/Vuex';
+import { Bootstrap } from '@/icons/TechnologyLogos/Bootstrap';
+import { ChakraUi } from '@/icons/TechnologyLogos/ChakraUi';
+import { Css } from '@/icons/TechnologyLogos/Css';
+import { Html } from '@/icons/TechnologyLogos/Html';
+import { JavaScript } from '@/icons/TechnologyLogos/JavaScript';
+import { Next } from '@/icons/TechnologyLogos/Next';
+import { Nuxt } from '@/icons/TechnologyLogos/Nuxt';
+import { ReactIcon } from '@/icons/TechnologyLogos/ReactIcon';
+import { Redux } from '@/icons/TechnologyLogos/Redux';
+import { Sass } from '@/icons/TechnologyLogos/Sass';
+import { Tailwind } from '@/icons/TechnologyLogos/Tailwind';
+import { TypeScript } from '@/icons/TechnologyLogos/TypeScript';
+import { VueJs } from '@/icons/TechnologyLogos/VueJs';
+import { Vuex } from '@/icons/TechnologyLogos/Vuex';
 
 export const skills: { title: string; icon: React.ReactNode }[] = [
     {
