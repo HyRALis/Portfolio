@@ -1,3 +1,4 @@
+import { cn } from '@/utils/twMerge';
 import React from 'react';
 
 export interface GradientTextProps {
@@ -12,8 +13,9 @@ export const GradientText: React.FC<GradientTextProps> = ({ text, textClassName,
     const Tag = renderTag || defaultRenderTag;
 
     return Tag({
-        className: `text-7xl bg-gradient-to-r from-purple-500 to-blue-500 from-[0%] via-[10%] rounded-full inline-block text-transparent bg-clip-text ${
-            textClassName ?? ''
-        }`
+        className: cn(
+            'text-7xl bg-gradient-to-r from-purple-500 to-blue-500 from-[0%] via-[10%] inline-block text-transparent bg-clip-text',
+            textClassName
+        )
     });
 };
