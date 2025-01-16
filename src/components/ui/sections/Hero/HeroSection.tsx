@@ -4,8 +4,6 @@ import Image from 'next/image';
 import heroImage from '@/app/images/hero_bg.jpg';
 
 import { Section } from '../../Section';
-import { FloatingDock } from './FloatingDock';
-import { floatingDockItems } from '@/utils/constants/floatingDockItems';
 
 export const HeroSection = () => {
     return (
@@ -23,11 +21,6 @@ export const HeroSection = () => {
                 </div>
                 <div className="absolute bottom-0 left-0  bg-gradient-to-b from-transparent to-[#0A0A0A] from-[0%] via-[50%] w-screen h-96 -z-10"></div>
                 <div className="absolute top-0 left-0  bg-gradient-to-b from-[#0A0A0A] to-transparent  from-[0%] via-[50%] w-screen h-96 -z-10"></div>
-                <FloatingDock
-                    items={floatingDockItems}
-                    desktopClassName="z-30 min-w-max max-w-max"
-                    mobileClassName="z-30"
-                />
             </Section>
         </>
     );

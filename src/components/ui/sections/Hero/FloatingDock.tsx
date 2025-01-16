@@ -91,10 +91,10 @@ const FloatingDockDesktop = ({
     const mouseX = useMotionValue(Infinity);
     return (
         <motion.div
-            onMouseMove={(e) => mouseX.set(e.pageX)}
+            onMouseMove={(e) => mouseX.set(e.pageY)}
             onMouseLeave={() => mouseX.set(Infinity)}
             className={cn(
-                'mx-auto w-max mt-[80%] hidden md:flex h-16 gap-4 items-end  rounded-2xl bg-gray-50 dark:bg-neutral-900 px-4 pb-3',
+                'absolute bottom-10 left-10 h-max hidden md:flex md:flex-col gap-4 rounded-2xl bg-gray-50 dark:bg-neutral-900 px-4 py-3',
                 className
             )}
         >
@@ -119,9 +119,9 @@ function IconContainer({
     const ref = useRef<HTMLDivElement>(null);
 
     const distance = useTransform(mouseX, (val) => {
-        const bounds = ref.current?.getBoundingClientRect() ?? { x: 0, width: 0 };
+        const bounds = ref.current?.getBoundingClientRect() ?? { y: 0, height: 0 };
 
-        return val - bounds.x - bounds.width / 2;
+        return val - bounds.y - bounds.height;
     });
 
     const widthTransform = useTransform(distance, [-150, 0, 150], [40, 80, 40]);
@@ -166,9 +166,9 @@ function IconContainer({
                 <AnimatePresence>
                     {hovered && (
                         <motion.div
-                            initial={{ opacity: 0, y: 10, x: '-50%' }}
-                            animate={{ opacity: 1, y: 0, x: '-50%' }}
-                            exit={{ opacity: 0, y: 2, x: '-50%' }}
+                            initial={{ opacity: 0, x: 10, y: '-50%' }}
+                            animate={{ opacity: 1, x: 0, y: '-50%' }}
+                            exit={{ opacity: 0, x: 2, y: '-50%' }}
                             className="px-2 py-0.5 whitespace-pre rounded-md bg-gray-100 border dark:bg-neutral-800 dark:border-neutral-900 dark:text-white border-gray-200 text-neutral-700 absolute left-1/2 -translate-x-1/2 -top-8 w-fit text-xs"
                         >
                             {title}
