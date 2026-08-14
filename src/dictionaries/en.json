@@ -1,0 +1,50 @@
+{
+  "hero": {
+    "subtext": "Building digital experiences that ",
+    "words": ["spark joy", "improve lives", "enhance productivity", "make a difference"],
+    "description": "Hey, I'm Petar Trajanoski 👋. I'm a full stack developer who loves crafting beautiful, modern, and high-performance applications. When I'm not tweaking animations or pushing pixels, you'll find me exploring new tech stacks. Let's build something awesome together!",
+    "contact": "Contact Me →"
+  },
+  "skills": {
+    "title": "Skills"
+  },
+  "workExperience": {
+    "title": "Work Experience",
+    "quantox": {
+      "title": "Quantox technologies",
+      "date": "May 2022 - Present",
+      "points": [
+        "Building enterprise level projects from social media sites to complex nation wide healthcare systems",
+        "Utilize atomic design principles.",
+        "Work with React.js ecosystem including Next.js.",
+        "Collaborated closely with the back-end developers to integrate API calls into the front-end codebase.",
+        "Created UI components with reusable code for a better user experience.",
+        "Learned new front-end programming languages and methodologies to perform tasks."
+      ]
+    },
+    "embedSocial": {
+      "title": "Embed Social",
+      "date": "March 2021 - May 2022",
+      "points": [
+        "Implemented a link in bio page builder with Vue.js as a solo front-end developer in 3 months, including but not limited to component and frontend architecture design and implementation, mentorship of other developers, and some team leading responsibilities",
+        "Implementation of widget editor for form builder",
+        "Wrote company wide guidelines for unit testing and component testing for Jest + VueTestUtils unit testing."
+      ]
+    },
+    "codeConnectors": {
+      "title": "The code connectors",
+      "date": "March 2021 - May 2022",
+      "points": [
+        "Built and designed multiple projects from scratch. From website for small businesses to complex web applications.",
+        "Designed the frontend architecture and implemented components for a better user experience.",
+        "Worked with React, Vue.js, and Livewire to build websites and web applications depending on the client needs and requirements."
+      ]
+    }
+  },
+  "testimonials": {
+    "title": "Testimonials"
+  },
+  "footer": {
+    "copyright": "Petar Trajanoski. All rights reserved."
+  }
+}

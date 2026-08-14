@@ -1,14 +1,15 @@
 import React from 'react';
 
+import { testimonials } from '@/utils/constants/testimonials';
+import type { Dictionary } from '@/dictionaries';
 import { Section } from '../../Section';
 import { GradientText } from '../../GradientText';
 import { AnimatedTestimonials } from './AnimatedTestimonials';
-import { testimonials } from '@/utils/constants/testimonials';
 
-export const Testimonials = () => {
+export const Testimonials = ({ dict }: { dict: Dictionary }) => {
     return (
         <Section className="space-y-10">
-            <GradientText text="Testimonials" />
+            <GradientText text={dict.testimonials.title} />
             <AnimatedTestimonials testimonials={testimonials} />
         </Section>
     );

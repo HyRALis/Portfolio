@@ -5,10 +5,11 @@ import Link from 'next/link';
 import heroImage from '@/app/images/hero_bg.jpg';
 import heroWorkingImage from '@/app/images/my_image_generated.png';
 
+import type { Dictionary } from '@/dictionaries';
 import { Section } from '../../Section';
 import { LayoutTextFlip } from './LayoutTextFlip';
 
-export const HeroSection = () => {
+export const HeroSection = ({ dict }: { dict: Dictionary }) => {
     return (
         <Section className="w-screen h-screen">
             <div className="absolute top-0 left-0 w-screen h-screen flex justify-center items-center -z-20">
@@ -31,15 +32,12 @@ export const HeroSection = () => {
                         <div className="flex flex-col items-center md:items-start gap-2 w-full mb-10 text-center md:text-left">
                             <h1 className="sr-only">Petar Trajanoski — Full Stack Developer</h1>
                             <LayoutTextFlip
-                                text="Building digital experiences that "
-                                words={['spark joy', 'improve lives', 'enhance productivity', 'make a difference']}
+                                text={dict.hero.subtext}
+                                words={dict.hero.words}
                             />
                         </div>
                         <p className="text-lg md:text-xl text-neutral-300 max-w-xl mb-6">
-                            Hey, I&apos;m Petar Trajanoski 👋. I&apos;m a full stack developer who loves crafting
-                            beautiful, modern, and high-performance applications. When I&apos;m not tweaking animations
-                            or pushing pixels, you&apos;ll find me exploring new tech stacks. Let&apos;s build something
-                            awesome together!
+                            {dict.hero.description}
                         </p>
                         <Link
                             href="mailto:petar.trajanoski.pt@gmail.com?subject=Software%20Development%20Work%20Inquiry"
@@ -48,7 +46,7 @@ export const HeroSection = () => {
                             <button className="p-[3px] rounded-2xl relative">
                                 <div className="absolute inset-0 bg-gradient-to-r from-indigo-500 to-purple-500 rounded-2xl" />
                                 <div className="px-10 py-4 text-2xl bg-black rounded-2xl relative group transition duration-200 text-white hover:bg-transparent">
-                                    Contact Me &rarr;
+                                    {dict.hero.contact}
                                 </div>
                             </button>
                         </Link>
