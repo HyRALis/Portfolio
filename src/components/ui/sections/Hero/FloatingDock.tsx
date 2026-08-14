@@ -174,7 +174,7 @@ function IconContainer({
     const distance = useTransform(mouseX, (val) => {
         const bounds = ref.current?.getBoundingClientRect() ?? { y: 0, height: 0 };
 
-        return val - bounds.y - bounds.height - 100;
+        return val - bounds.y - bounds.height - 300;
     });
 
     const widthTransform = useTransform(distance, [-150, 0, 150], [40, 80, 40]);

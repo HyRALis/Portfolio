@@ -1,10 +1,10 @@
 import React from 'react';
 
-import { Section } from '../../Section';
-import { AnimatedCardsHover } from './AnimatedCardsHover';
 import { skills } from '@/utils/constants/skills';
-import { SkillsCard } from './SkillsCard';
+import { Section } from '../../Section';
 import { AnimatedTooltip } from '../../AnimatedTooltip';
+import { AnimatedCardsHover } from './AnimatedCardsHover';
+import { SkillsCard } from './SkillsCard';
 
 export const Skills = () => {
     const skillCards = skills.map(({ title, icon }) => ({
