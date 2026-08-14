@@ -2,6 +2,10 @@ import type { Metadata } from 'next';
 import { Geist, Geist_Mono } from 'next/font/google';
 import { Footer } from '@/components/ui/sections/Footer/Footer';
 import { LanguageToggle } from '@/components/ui/LanguageToggle';
+import { NextIntlClientProvider } from 'next-intl';
+import { getMessages, setRequestLocale } from 'next-intl/server';
+import { routing } from '@/i18n/routing';
+import { notFound } from 'next/navigation';
 import '../globals.css';
 
 const geistSans = Geist({
@@ -75,6 +79,10 @@ export async function generateMetadata({ params }: { params: Promise<{ lang: str
     };
 }
 
+export function generateStaticParams() {
+    return routing.locales.map((locale) => ({ lang: locale }));
+}
+
 export default async function RootLayout({
     children,
     params
@@ -83,13 +91,22 @@ export default async function RootLayout({
     params: Promise<{ lang: string }>;
 }) {
     const resolvedParams = await params;
+    
+    if (!routing.locales.includes(resolvedParams.lang as any)) {
+        notFound();
+    }
+    setRequestLocale(resolvedParams.lang);
+    
+    const messages = await getMessages();
 
     return (
         <html lang={resolvedParams.lang}>
             <body className={`${geistSans.variable} ${geistMono.variable} antialiased dark flex flex-col min-h-screen`}>
-                <LanguageToggle />
-                <div className="flex-1">{children}</div>
-                <Footer dict={await import(`@/dictionaries/${resolvedParams.lang}.json`).then((m) => m.default)} />
+                <NextIntlClientProvider messages={messages}>
+                    <LanguageToggle />
+                    <div className="flex-1">{children}</div>
+                    <Footer />
+                </NextIntlClientProvider>
             </body>
         </html>
     );

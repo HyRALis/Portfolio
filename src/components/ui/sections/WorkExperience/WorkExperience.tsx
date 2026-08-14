@@ -1,37 +1,39 @@
 import React from 'react';
+import { getTranslations } from 'next-intl/server';
 
-import type { Dictionary } from '@/dictionaries';
-import { Section } from '../../Section';
-import { GradientText } from '../../GradientText';
 import { Timeline } from './Timeline';
 import { WorkExperienceCard } from './WorkExperienceCard';
+import { Section } from '../../Section';
+import { GradientText } from '../../GradientText';
 
-export const WorkExperience = ({ dict }: { dict: Dictionary }) => {
+export const WorkExperience = async () => {
+    const t = await getTranslations('workExperience');
+
     const localizedExperience = [
         {
-            title: dict.workExperience.quantox.title,
+            title: t('quantox.title'),
             content: (
                 <WorkExperienceCard
-                    header={dict.workExperience.quantox.date}
-                    items={dict.workExperience.quantox.points}
+                    header={t('quantox.date')}
+                    items={t.raw('quantox.points')}
                 />
             )
         },
         {
-            title: dict.workExperience.embedSocial.title,
+            title: t('embedSocial.title'),
             content: (
                 <WorkExperienceCard
-                    header={dict.workExperience.embedSocial.date}
-                    items={dict.workExperience.embedSocial.points}
+                    header={t('embedSocial.date')}
+                    items={t.raw('embedSocial.points')}
                 />
             )
         },
         {
-            title: dict.workExperience.codeConnectors.title,
+            title: t('codeConnectors.title'),
             content: (
                 <WorkExperienceCard
-                    header={dict.workExperience.codeConnectors.date}
-                    items={dict.workExperience.codeConnectors.points}
+                    header={t('codeConnectors.date')}
+                    items={t.raw('codeConnectors.points')}
                 />
             )
         }
@@ -39,7 +41,7 @@ export const WorkExperience = ({ dict }: { dict: Dictionary }) => {
 
     return (
         <Section className="space-y-10">
-            <GradientText text={dict.workExperience.title} />
+            <GradientText text={t('title')} />
             <div className="w-full bg-white dark:bg-neutral-950 flex md:hidden flex-col gap-4 justify-center items-center">
                 {localizedExperience.map((item) => (
                     <div key={item.title} className="flex flex-col space-y-4">

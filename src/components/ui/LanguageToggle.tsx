@@ -1,17 +1,18 @@
 'use client';
 
-import { usePathname, useRouter } from 'next/navigation';
+import { usePathname, useRouter } from '@/i18n/routing';
+import { useParams } from 'next/navigation';
 
 export const LanguageToggle = () => {
     const pathname = usePathname();
     const router = useRouter();
+    const params = useParams();
 
-    const currentLocale = pathname.split('/')[1];
+    const currentLocale = params.lang as string;
 
     const toggleLanguage = () => {
         const nextLocale = currentLocale === 'mk' ? 'en' : 'mk';
-        const newPathname = pathname.replace(`/${currentLocale}`, `/${nextLocale}`);
-        router.push(newPathname || `/${nextLocale}`);
+        router.replace(pathname, { locale: nextLocale });
     };
 
     return (

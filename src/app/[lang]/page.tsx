@@ -4,11 +4,12 @@ import { Skills } from '@/components/ui/sections/Skills/Skills';
 import { Testimonials } from '@/components/ui/sections/Testimonials/Testimonials';
 import { WorkExperience } from '@/components/ui/sections/WorkExperience/WorkExperience';
 import { floatingDockItems } from '@/utils/constants/floatingDockItems';
-import { getDictionary } from '@/dictionaries';
+import { setRequestLocale } from 'next-intl/server';
 
 export default async function Home({ params }: { params: Promise<{ lang: string }> }) {
     const resolvedParams = await params;
-    const dict = await getDictionary(resolvedParams.lang);
+    setRequestLocale(resolvedParams.lang);
+    
     const jsonLd = {
         '@context': 'https://schema.org',
         '@graph': [
@@ -40,10 +41,10 @@ export default async function Home({ params }: { params: Promise<{ lang: string 
                 dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
             />
             <main className="flex flex-col justify-center space-y-32">
-                <HeroSection dict={dict} />
-                <Skills dict={dict} />
-                <WorkExperience dict={dict} />
-                <Testimonials dict={dict} />
+                <HeroSection />
+                <Skills />
+                <WorkExperience />
+                <Testimonials />
                 <FloatingDock
                     items={floatingDockItems}
                     desktopClassName="z-30 min-h-max max-h-max max-w-[76px]"
