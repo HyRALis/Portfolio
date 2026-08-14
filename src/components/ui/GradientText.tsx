@@ -14,7 +14,7 @@ export const GradientText: React.FC<GradientTextProps> = ({ text, textClassName,
 
     return Tag({
         className: cn(
-            'text-7xl bg-gradient-to-r from-purple-500 to-blue-500 from-[0%] via-[10%] inline-block text-transparent bg-clip-text',
+            'text-3xl md:text-5xl lg:text-7xl bg-gradient-to-r from-purple-500 to-blue-500 from-[0%] via-[10%] inline-block text-transparent bg-clip-text',
             textClassName
         )
     });
