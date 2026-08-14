@@ -8,17 +8,20 @@ export const Footer = () => {
                 <div className="text-neutral-400 text-sm mb-4 md:mb-0">
                     &copy; {new Date().getFullYear()} Petar Trajanoski. All rights reserved.
                 </div>
-                <div className="flex items-center space-x-6 text-sm text-neutral-400">
-                    <Link href="https://github.com" target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors">
-                        GitHub
-                    </Link>
-                    <Link href="https://linkedin.com" target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors">
+                <nav aria-label="Social media links" className="flex items-center space-x-6 text-sm text-neutral-400">
+                    <Link href="https://www.linkedin.com/in/petar-trajanoski-464aa8b6/" target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors">
                         LinkedIn
                     </Link>
-                    <Link href="https://twitter.com" target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors">
-                        Twitter
+                    <Link href="https://github.com/HyRALis" target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors">
+                        GitHub
                     </Link>
-                </div>
+                    <Link href="https://www.facebook.com/petar.trajanoski" target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors">
+                        Facebook
+                    </Link>
+                    <Link href="https://www.instagram.com/p.trajanoski" target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors">
+                        Instagram
+                    </Link>
+                </nav>
             </div>
         </footer>
     );

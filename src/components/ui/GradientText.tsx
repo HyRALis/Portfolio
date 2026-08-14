@@ -8,7 +8,7 @@ export interface GradientTextProps {
 }
 
 export const GradientText: React.FC<GradientTextProps> = ({ text, textClassName, renderTag }) => {
-    const defaultRenderTag = (props: React.HTMLAttributes<HTMLElement>) => <h3 {...props}>{text}</h3>;
+    const defaultRenderTag = (props: React.HTMLAttributes<HTMLElement>) => <h2 {...props}>{text}</h2>;
 
     const Tag = renderTag || defaultRenderTag;
 

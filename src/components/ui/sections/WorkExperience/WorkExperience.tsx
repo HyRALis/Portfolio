@@ -1,6 +1,6 @@
 import React from 'react';
 import { Timeline } from './Timeline';
-import { workExperience } from '@/utils/constants/workEperience';
+import { workExperience } from '@/utils/constants/workExperience';
 import { Section } from '../../Section';
 import { GradientText } from '../../GradientText';
 

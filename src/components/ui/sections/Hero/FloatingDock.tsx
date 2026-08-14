@@ -9,7 +9,7 @@
 import { cn } from '@/utils/twMerge';
 import { AnimatePresence, MotionValue, motion, useMotionValue, useSpring, useTransform } from 'framer-motion';
 import Link from 'next/link';
-import { useEffect, useRef, useState } from 'react';
+import { useRef, useState } from 'react';
 
 export const FloatingDock = ({
     items,
@@ -204,10 +204,6 @@ function IconContainer({
         stiffness: 150,
         damping: 12
     });
-
-    useEffect(() => {
-        console.log(distance.get());
-    }, [distance]);
 
     const [hovered, setHovered] = useState(false);
 

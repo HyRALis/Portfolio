@@ -13,12 +13,14 @@ export const HeroSection = () => {
         <Section className="w-screen h-screen">
             <div className="absolute top-0 left-0 w-screen h-screen flex justify-center items-center -z-20">
                 <Image
-                    src={heroImage.src}
-                    alt={'Hero Image'}
+                    src={heroImage}
+                    alt=""
                     quality={100}
                     fill
+                    priority
                     sizes="100vw"
                     style={{ objectFit: 'cover' }}
+                    placeholder="blur"
                 />
             </div>
             <div className="absolute bottom-0 left-0  bg-gradient-to-b from-transparent to-[#0A0A0A] from-[0%] via-[50%] w-screen h-96 -z-10"></div>
@@ -27,19 +29,12 @@ export const HeroSection = () => {
                 <div className="container flex flex-col-reverse md:flex-row items-center justify-between gap-12 z-10 w-full">
                     <div className="flex-1 flex flex-col items-center md:items-start text-center md:text-left">
                         <div className="flex flex-col items-center md:items-start gap-2 w-full mb-10 text-center md:text-left">
+                            <h1 className="sr-only">Petar Trajanoski — Full Stack Developer</h1>
                             <LayoutTextFlip
                                 text="Building digital experiences that "
                                 words={['spark joy', 'improve lives', 'enhance productivity', 'make a difference']}
                             />
                         </div>
-                        {/* <div className="h-[20rem] flex justify-center items-center">
-                            <div className="text-4xl lg:text-6xl mx-auto font-normal text-neutral-600 dark:text-neutral-300">
-                                Building digital experiences that
-                                <FlipWords
-                                    words={['spark joy', 'improve lives', 'enhance productivity', 'make a difference']}
-                                />{' '}
-                            </div>
-                        </div> */}
                         <p className="text-lg md:text-xl text-neutral-300 max-w-xl mb-6">
                             Hey, I&apos;m Petar Trajanoski 👋. I&apos;m a full stack developer who loves crafting
                             beautiful, modern, and high-performance applications. When I&apos;m not tweaking animations
@@ -61,10 +56,11 @@ export const HeroSection = () => {
                     <div className="flex-[0.8] w-full flex justify-center md:justify-end">
                         <div className="relative w-full max-w-[15rem] md:max-w-[37rem] aspect-[1086/1448] max-h-[50%] rounded-2xl overflow-hidden">
                             <Image
-                                src={heroWorkingImage.src}
-                                alt="Me working"
+                                src={heroWorkingImage}
+                                alt="Petar Trajanoski - Full Stack Developer"
                                 fill
                                 style={{ objectFit: 'fill' }}
+                                placeholder="blur"
                                 className="opacity-90 hover:opacity-100 transition-opacity duration-300"
                             />
                         </div>

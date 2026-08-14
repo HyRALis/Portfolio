@@ -6,17 +6,47 @@ import { WorkExperience } from '@/components/ui/sections/WorkExperience/WorkExpe
 import { floatingDockItems } from '@/utils/constants/floatingDockItems';
 
 export default function Home() {
+    const jsonLd = {
+        '@context': 'https://schema.org',
+        '@graph': [
+            {
+                '@type': 'WebSite',
+                name: 'Petar Trajanoski',
+                url: 'https://petartrajanoski.me'
+            },
+            {
+                '@type': 'Person',
+                name: 'Petar Trajanoski',
+                url: 'https://petartrajanoski.me',
+                jobTitle: 'Full Stack Developer',
+                email: 'petar.trajanoski.pt@gmail.com',
+                sameAs: [
+                    'https://www.linkedin.com/in/petar-trajanoski-464aa8b6/',
+                    'https://github.com/HyRALis',
+                    'https://www.facebook.com/petar.trajanoski',
+                    'https://www.instagram.com/p.trajanoski'
+                ]
+            }
+        ]
+    };
+
     return (
-        <main className="flex flex-col justify-center space-y-32">
-            <HeroSection />
-            <Skills />
-            <WorkExperience />
-            <Testimonials />
-            <FloatingDock
-                items={floatingDockItems}
-                desktopClassName="z-30 min-h-max max-h-max max-w-[76px]"
-                mobileClassName="z-30"
+        <>
+            <script
+                type="application/ld+json"
+                dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
             />
-        </main>
+            <main className="flex flex-col justify-center space-y-32">
+                <HeroSection />
+                <Skills />
+                <WorkExperience />
+                <Testimonials />
+                <FloatingDock
+                    items={floatingDockItems}
+                    desktopClassName="z-30 min-h-max max-h-max max-w-[76px]"
+                    mobileClassName="z-30"
+                />
+            </main>
+        </>
     );
 }

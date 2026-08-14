@@ -22,7 +22,7 @@ export const LayoutTextFlip = ({
         }, duration);
 
         return () => clearInterval(interval);
-    }, []);
+    }, [words.length, duration]);
 
     return (
         <>

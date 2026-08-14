@@ -13,12 +13,6 @@ export const testimonials: Testimonial[] = [
         designation: 'Head of Development at Quantox Technology',
         src: slovic.src
     },
-    // {
-    //     quote: "Implementation was seamless and the results exceeded our expectations. The platform's flexibility is remarkable.",
-    //     name: 'Vera Chelikikj',
-    //     designation: 'Head of HR at Quantox Technology',
-    //     src: anastasija.src
-    // },
     {
         quote: "Very easy going and outspoken guy. He brought a lot of positive energy in the team. I'd say he assumed a leadership position in the team he worked on.",
         name: 'Filip Koteski',

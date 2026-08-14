@@ -14,9 +14,3 @@ export const SkillsCard = ({ className, children }: { className?: string; childr
         </div>
     );
 };
-export const SkillsCardTitle = ({ className, children }: { className?: string; children: React.ReactNode }) => {
-    return <h4 className={cn('text-zinc-100 font-bold tracking-wide mt-4', className)}>{children}</h4>;
-};
-export const SkillsCardDescription = ({ className, children }: { className?: string; children: React.ReactNode }) => {
-    return <p className={cn('mt-8 text-zinc-400 tracking-wide leading-relaxed text-sm', className)}>{children}</p>;
-};
