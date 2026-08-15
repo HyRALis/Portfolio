@@ -25,7 +25,7 @@ export const Skills = () => {
 
     return (
         <Section id="skills" className="space-y-10">
-            <AnimatedCardsHover items={skillCards} className="grid-cols-2 md:grid-cols-4  lg:grid-cols-8" />
+            <AnimatedCardsHover items={skillCards} className="grid-cols-3 md:grid-cols-4 lg:grid-cols-10" />
         </Section>
     );
 };

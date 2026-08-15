@@ -16,58 +16,58 @@ import { Vuex } from '@/icons/TechnologyLogos/Vuex';
 export const skills: { title: string; icon: React.ReactNode }[] = [
     {
         title: 'HTML',
-        icon: <Html svgProps={{ width: '100px', height: '100px' }} />
+        icon: <Html svgProps={{ width: '60px', height: '60px' }} />
     },
     {
         title: 'CSS',
-        icon: <Css svgProps={{ width: '100px', height: '100px' }} />
+        icon: <Css svgProps={{ width: '60px', height: '60px' }} />
     },
     {
         title: 'JavaScript',
-        icon: <JavaScript svgProps={{ width: '100px', height: '100px' }} />
+        icon: <JavaScript svgProps={{ width: '60px', height: '60px' }} />
     },
     {
         title: 'TypeScript',
-        icon: <TypeScript svgProps={{ width: '100px', height: '100px' }} />
+        icon: <TypeScript svgProps={{ width: '60px', height: '60px' }} />
     },
     {
         title: 'React',
-        icon: <ReactIcon svgProps={{ width: '100px', height: '100px' }} />
+        icon: <ReactIcon svgProps={{ width: '60px', height: '60px' }} />
     },
     {
         title: 'Next.js',
-        icon: <Next svgProps={{ width: '100px', height: '100px' }} />
+        icon: <Next svgProps={{ width: '60px', height: '60px' }} />
     },
     {
         title: 'Vue.js',
-        icon: <VueJs svgProps={{ width: '100px', height: '100px' }} />
+        icon: <VueJs svgProps={{ width: '60px', height: '60px' }} />
     },
     {
         title: 'Nuxt.js',
-        icon: <Nuxt svgProps={{ width: '100px', height: '100px' }} />
+        icon: <Nuxt svgProps={{ width: '60px', height: '60px' }} />
     },
     {
         title: 'Redux',
-        icon: <Redux svgProps={{ width: '100px', height: '100px' }} />
+        icon: <Redux svgProps={{ width: '60px', height: '60px' }} />
     },
     {
         title: 'Vuex',
-        icon: <Vuex svgProps={{ width: '100px', height: '100px' }} />
+        icon: <Vuex svgProps={{ width: '60px', height: '60px' }} />
     },
     {
         title: 'Tailwind CSS',
-        icon: <Tailwind svgProps={{ width: '100px', height: '100px' }} />
+        icon: <Tailwind svgProps={{ width: '60px', height: '60px' }} />
     },
     {
         title: 'Sass',
-        icon: <Sass svgProps={{ width: '100px', height: '100px' }} />
+        icon: <Sass svgProps={{ width: '60px', height: '60px' }} />
     },
     {
         title: 'Bootstrap',
-        icon: <Bootstrap svgProps={{ width: '100px', height: '100px' }} />
+        icon: <Bootstrap svgProps={{ width: '60px', height: '60px' }} />
     },
     {
         title: 'ChakraUi',
-        icon: <ChakraUi svgProps={{ width: '100px', height: '100px' }} />
+        icon: <ChakraUi svgProps={{ width: '60px', height: '60px' }} />
     }
 ];
