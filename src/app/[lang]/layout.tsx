@@ -6,6 +6,7 @@ import { NextIntlClientProvider } from 'next-intl';
 import { getMessages, setRequestLocale } from 'next-intl/server';
 import { routing } from '@/i18n/routing';
 import { notFound } from 'next/navigation';
+import { Navbar } from '@/components/ui/Navbar/Navbar';
 import '../globals.css';
 
 const geistSans = Geist({
@@ -100,9 +101,10 @@ export default async function RootLayout({
     const messages = await getMessages();
 
     return (
-        <html lang={resolvedParams.lang}>
+        <html lang={resolvedParams.lang} className="scroll-smooth">
             <body className={`${geistSans.variable} ${geistMono.variable} antialiased dark flex flex-col min-h-screen`}>
                 <NextIntlClientProvider messages={messages}>
+                    <Navbar />
                     <LanguageToggle />
                     <div className="flex-1">{children}</div>
                     <Footer />

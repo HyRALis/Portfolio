@@ -43,7 +43,7 @@ const FloatingDockMobile = ({
             onTouchMove={(e) => mouseX.set(e.touches[0].clientX)}
             onTouchEnd={() => mouseX.set(Infinity)}
             className={cn(
-                'fixed bottom-6 left-1/2 -translate-x-1/2 flex md:hidden flex-row gap-4 rounded-2xl bg-gray-50 dark:bg-neutral-900 px-4 py-3',
+                'fixed bottom-6 left-1/2 -translate-x-1/2 flex md:hidden flex-row gap-4 rounded-full bg-gray-50/50 dark:bg-neutral-900/50 backdrop-blur-md border border-gray-200 dark:border-neutral-800 shadow-xl px-4 py-3',
                 className
             )}
         >
@@ -147,7 +147,7 @@ const FloatingDockDesktop = ({
             onMouseMove={(e) => mouseX.set(e.screenY)}
             onMouseLeave={() => mouseX.set(Infinity)}
             className={cn(
-                'fixed bottom-10 left-10 h-max hidden md:flex md:flex-col gap-4 rounded-2xl bg-gray-50 dark:bg-neutral-900 px-4 py-3',
+                'fixed bottom-10 left-10 h-max hidden md:flex md:flex-col gap-4 rounded-full bg-gray-50/50 dark:bg-neutral-900/50 backdrop-blur-md border border-gray-200 dark:border-neutral-800 shadow-xl px-3 py-4',
                 className
             )}
         >

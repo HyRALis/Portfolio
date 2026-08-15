@@ -14,7 +14,7 @@ export const HeroSection = async () => {
     const t = await getTranslations('hero');
     
     return (
-        <Section className="w-screen h-screen">
+        <Section id="home" className="w-screen h-screen">
             <div className="absolute top-0 left-0 w-screen h-screen flex justify-center items-center -z-20">
                 <Image
                     src={heroImage}

@@ -40,7 +40,7 @@ export const WorkExperience = async () => {
     ];
 
     return (
-        <Section className="space-y-10">
+        <Section id="experience" className="space-y-10">
             <GradientText text={t('title')} />
             <div className="w-full bg-white dark:bg-neutral-950 flex md:hidden flex-col gap-4 justify-center items-center">
                 {localizedExperience.map((item) => (

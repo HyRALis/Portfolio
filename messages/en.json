@@ -8,6 +8,12 @@
   "skills": {
     "title": "Skills"
   },
+  "navbar": {
+    "home": "Home",
+    "skills": "Skills",
+    "experience": "Experience",
+    "testimonials": "Testimonials"
+  },
   "workExperience": {
     "title": "Work Experience",
     "quantox": {

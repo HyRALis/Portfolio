@@ -10,7 +10,7 @@ export const Testimonials = async () => {
     const t = await getTranslations('testimonials');
 
     return (
-        <Section className="space-y-10">
+        <Section id="testimonials" className="space-y-10">
             <GradientText text={t('title')} />
             <AnimatedTestimonials testimonials={testimonials} />
         </Section>
