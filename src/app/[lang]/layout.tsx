@@ -92,7 +92,7 @@ export default async function RootLayout({
 }) {
     const resolvedParams = await params;
     
-    if (!routing.locales.includes(resolvedParams.lang as any)) {
+    if (!routing.locales.includes(resolvedParams.lang as 'en' | 'mk')) {
         notFound();
     }
     setRequestLocale(resolvedParams.lang);
