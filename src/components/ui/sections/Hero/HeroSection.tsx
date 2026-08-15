@@ -46,12 +46,12 @@ export const HeroSection = async () => {
                             href="mailto:petar.trajanoski.pt@gmail.com?subject=Software%20Development%20Work%20Inquiry"
                             className="inline-flex items-center justify-center text-base font-medium"
                         >
-                            <button className="p-[3px] rounded-2xl relative">
+                            <div className="p-[3px] rounded-2xl relative" role="presentation">
                                 <div className="absolute inset-0 bg-gradient-to-r from-indigo-500 to-purple-500 rounded-2xl" />
                                 <div className="px-10 py-4 text-2xl bg-black rounded-2xl relative group transition duration-200 text-white hover:bg-transparent">
                                     {t('contact')}
                                 </div>
-                            </button>
+                            </div>
                         </Link>
                     </div>
                     <div className="flex-[0.8] w-full flex justify-center md:justify-end">

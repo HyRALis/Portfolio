@@ -54,7 +54,8 @@ export const Navbar = () => {
     return (
         <>
             {/* Desktop Navbar */}
-            <motion.div 
+            <motion.nav 
+                aria-label="Main Navigation"
                 initial={{ y: -100, x: '-50%', opacity: 0 }}
                 animate={{ y: 0, x: '-50%', opacity: 1 }}
                 className="hidden md:flex fixed top-4 left-1/2 z-[60] bg-gray-50/50 dark:bg-neutral-900/50 backdrop-blur-md border border-gray-200 dark:border-neutral-800 rounded-full p-2 items-center justify-center gap-1 shadow-xl"
@@ -81,7 +82,7 @@ export const Navbar = () => {
                         </Link>
                     );
                 })}
-            </motion.div>
+            </motion.nav>
 
             {/* Mobile Hamburger Button */}
             <div className="md:hidden fixed top-4 left-4 z-[60]">
@@ -97,7 +98,8 @@ export const Navbar = () => {
             {/* Mobile Menu */}
             <AnimatePresence>
                 {isOpen && (
-                    <motion.div
+                    <motion.nav
+                        aria-label="Mobile Navigation"
                         initial={{ opacity: 0, y: -20, scale: 0.95 }}
                         animate={{ opacity: 1, y: 0, scale: 1 }}
                         exit={{ opacity: 0, y: -20, scale: 0.95 }}
@@ -122,7 +124,7 @@ export const Navbar = () => {
                                 </Link>
                             );
                         })}
-                    </motion.div>
+                    </motion.nav>
                 )}
             </AnimatePresence>
         </>
