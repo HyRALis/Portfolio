@@ -9,10 +9,11 @@ import heroWorkingImage from '@/app/images/my_image_generated.png';
 
 import { Section } from '../../Section';
 import { LayoutTextFlip } from './LayoutTextFlip';
+import { MagneticButton } from './MagneticButton';
 
 export const HeroSection = async () => {
     const t = await getTranslations('hero');
-    
+
     return (
         <Section id="home" className="w-screen h-screen">
             <div className="absolute top-0 left-0 w-screen h-screen flex justify-center items-center -z-20">
@@ -34,25 +35,22 @@ export const HeroSection = async () => {
                     <div className="flex-1 flex flex-col items-center md:items-start text-center md:text-left">
                         <div className="flex flex-col items-center md:items-start gap-2 w-full mb-10 text-center md:text-left">
                             <h1 className="sr-only">Petar Trajanoski — Full Stack Developer</h1>
-                            <LayoutTextFlip
-                                text={t('subtext')}
-                                words={t.raw('words')}
-                            />
+                            <LayoutTextFlip text={t('subtext')} words={t.raw('words')} />
                         </div>
-                        <p className="text-lg md:text-xl text-neutral-300 max-w-xl mb-6">
-                            {t('description')}
-                        </p>
-                        <Link
-                            href="mailto:petar.trajanoski.pt@gmail.com?subject=Software%20Development%20Work%20Inquiry"
-                            className="inline-flex items-center justify-center text-base font-medium"
-                        >
-                            <div className="p-[3px] rounded-2xl relative" role="presentation">
-                                <div className="absolute inset-0 bg-gradient-to-r from-indigo-500 to-purple-500 rounded-2xl" />
-                                <div className="px-10 py-4 text-2xl bg-black rounded-2xl relative group transition duration-200 text-white hover:bg-transparent">
-                                    {t('contact')}
+                        <p className="text-lg md:text-xl text-neutral-300 max-w-xl mb-10">{t('description')}</p>
+                        <MagneticButton>
+                            <Link
+                                href="mailto:petar.trajanoski.pt@gmail.com?subject=Software%20Development%20Work%20Inquiry"
+                                className="inline-flex items-center justify-center text-base font-medium"
+                            >
+                                <div className="p-[3px] rounded-2xl relative" role="presentation">
+                                    <div className="absolute inset-0 bg-gradient-to-r from-indigo-500 to-purple-500 rounded-2xl" />
+                                    <div className="px-10 py-4 text-2xl bg-black rounded-2xl relative group transition duration-200 text-white hover:bg-transparent">
+                                        {t('contact')}
+                                    </div>
                                 </div>
-                            </div>
-                        </Link>
+                            </Link>
+                        </MagneticButton>
                     </div>
                     <div className="flex-[0.8] w-full flex justify-center md:justify-end">
                         <div className="relative w-full max-w-[15rem] md:max-w-[37rem] aspect-[1086/1448] max-h-[50%] rounded-2xl overflow-hidden">
