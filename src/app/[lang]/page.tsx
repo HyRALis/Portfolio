@@ -36,10 +36,7 @@ export default async function Home({ params }: { params: Promise<{ lang: string 
 
     return (
         <>
-            <script
-                type="application/ld+json"
-                dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
-            />
+            <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
             <main className="flex flex-col justify-center space-y-32">
                 <HeroSection />
                 <Skills />
@@ -47,8 +44,8 @@ export default async function Home({ params }: { params: Promise<{ lang: string 
                 <Testimonials />
                 <FloatingDock
                     items={floatingDockItems}
-                    desktopClassName="z-30 min-h-max max-h-max max-w-[76px]"
-                    mobileClassName="z-30"
+                    desktopClassName="z-[9999] min-h-max max-h-max max-w-[76px]"
+                    mobileClassName="z-[9999]"
                 />
             </main>
         </>

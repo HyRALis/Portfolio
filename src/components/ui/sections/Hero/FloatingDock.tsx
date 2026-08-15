@@ -1,15 +1,9 @@
 'use client';
-
-/**
- * Note: Use position fixed according to your needs
- * Desktop navbar is better positioned at the bottom
- * Mobile navbar is better positioned at bottom right.
- **/
+import { useRef, useState } from 'react';
+import Link from 'next/link';
+import { AnimatePresence, MotionValue, motion, useMotionValue, useSpring, useTransform } from 'framer-motion';
 
 import { cn } from '@/utils/twMerge';
-import { AnimatePresence, MotionValue, motion, useMotionValue, useSpring, useTransform } from 'framer-motion';
-import Link from 'next/link';
-import { useRef, useState } from 'react';
 
 export const FloatingDock = ({
     items,
@@ -147,7 +141,7 @@ const FloatingDockDesktop = ({
             onMouseMove={(e) => mouseX.set(e.screenY)}
             onMouseLeave={() => mouseX.set(Infinity)}
             className={cn(
-                'fixed bottom-10 left-10 h-max hidden md:flex md:flex-col gap-4 rounded-full bg-gray-50/50 dark:bg-neutral-900/50 backdrop-blur-md border border-gray-200 dark:border-neutral-800 shadow-xl px-3 py-4',
+                'fixed z-[9999] bottom-10 left-10 h-max hidden md:flex md:flex-col gap-4 rounded-full bg-gray-50/50 dark:bg-neutral-900/50 backdrop-blur-md border border-gray-200 dark:border-neutral-800 shadow-xl px-3 py-4',
                 className
             )}
         >
