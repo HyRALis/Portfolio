@@ -7,6 +7,7 @@ import { getMessages, setRequestLocale } from 'next-intl/server';
 import { routing } from '@/i18n/routing';
 import { notFound } from 'next/navigation';
 import { Navbar } from '@/components/ui/Navbar/Navbar';
+import { Analytics } from '@vercel/analytics/next';
 import '../globals.css';
 
 const geistSans = Geist({
@@ -109,6 +110,7 @@ export default async function RootLayout({
                     <div className="flex-1">{children}</div>
                     <Footer />
                 </NextIntlClientProvider>
+                <Analytics />
             </body>
         </html>
     );
