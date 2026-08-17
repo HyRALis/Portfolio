@@ -15,7 +15,7 @@ export const HeroSection = async () => {
     const t = await getTranslations('hero');
 
     return (
-        <Section id="home" className="w-screen min-h-screen lg:h-screen">
+        <Section id="home" className="relative w-screen min-h-screen lg:h-screen">
             <div className="absolute top-0 left-0 w-screen h-screen flex justify-center items-center -z-20">
                 <Image
                     src={heroImage}
@@ -28,8 +28,8 @@ export const HeroSection = async () => {
                     placeholder="blur"
                 />
             </div>
-            <div className="absolute bottom-0 left-0  bg-gradient-to-b from-transparent to-[#0A0A0A] from-[0%] via-[50%] w-screen h-full -z-10"></div>
-            <div className="absolute top-0 left-0  bg-gradient-to-b from-[#0A0A0A] to-transparent  from-[0%] via-[50%] w-screen h-full -z-10"></div>
+            <div className="absolute bottom-0 left-0  bg-gradient-to-b from-transparent to-[#0A0A0A] from-[0%] via-[50%] w-screen h-96 -z-10"></div>
+            <div className="absolute top-0 left-0  bg-gradient-to-b from-[#0A0A0A] to-transparent  from-[0%] via-[50%] w-screen h-96 -z-10"></div>
             <div className="w-full h-full relative flex items-center justify-center mt-16 md:mt-0">
                 <div className="container flex flex-col-reverse md:flex-row items-center justify-between gap-12 z-10 w-full">
                     <div className="flex-1 flex flex-col items-center md:items-start text-center md:text-left">
