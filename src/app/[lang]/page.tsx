@@ -37,7 +37,7 @@ export default async function Home({ params }: { params: Promise<{ lang: string 
     return (
         <>
             <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
-            <main className="flex flex-col justify-center space-y-32">
+            <main className="flex flex-col justify-center space-y-32 pb-32">
                 <HeroSection />
                 <Skills />
                 <WorkExperience />

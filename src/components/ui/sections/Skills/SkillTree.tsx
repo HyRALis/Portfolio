@@ -47,11 +47,9 @@ const TreeBranch: React.FC<{ node: SkillNodeData; depth: number; index: number }
 export const SkillTree: React.FC = () => {
     return (
         <div className="skill-tree-wrapper w-full">
-            {/* Background grid pattern */}
             <div className="skill-tree-bg" />
 
             <div className="skill-tree-container w-full">
-                {/* 2-Column Grid on Large Screens for Frontend & Backend */}
                 <div className="grid grid-cols-1 xl:grid-cols-12 gap-8 w-full items-start">
                     {skillTreeSections.map((section) => {
                         const isFrontend = section.id === 'frontend';
@@ -66,7 +64,6 @@ export const SkillTree: React.FC = () => {
                                 viewport={{ once: true, margin: '-60px' }}
                                 transition={{ duration: 0.6 }}
                             >
-                                {/* Section Header */}
                                 <div className="skill-tree-section-header">
                                     <span className="skill-tree-section-emoji">{section.emoji}</span>
                                     <h3
@@ -85,7 +82,6 @@ export const SkillTree: React.FC = () => {
                                     />
                                 </div>
 
-                                {/* Tree roots */}
                                 <div className="tree-scroll-container overflow-x-auto pb-4 pt-2 w-full flex-1">
                                     <div className="tree-children tree-roots min-w-max">
                                         {section.roots.map((root, idx) => (
