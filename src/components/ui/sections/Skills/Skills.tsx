@@ -1,31 +1,18 @@
 import React from 'react';
 
-import { skills } from '@/utils/constants/skills';
-import { Section } from '../../Section';
-import { AnimatedTooltip } from '../../AnimatedTooltip';
-import { AnimatedCardsHover } from './AnimatedCardsHover';
-import { SkillsCard } from './SkillsCard';
+import { getTranslations } from 'next-intl/server';
 
-export const Skills = () => {
-    const skillCards = skills.map(({ title, icon }) => ({
-        title: title,
-        content: (
-            <AnimatedTooltip description={title}>
-                <SkillsCard
-                    key={title}
-                    className={`text-white flex items-center justify-center bg-neutral-100 dark:bg-neutral-800${
-                        title === 'ChakraUi' ? ' text-neutral-800 dark:text-neutral-500' : ''
-                    }`}
-                >
-                    {icon}
-                </SkillsCard>
-            </AnimatedTooltip>
-        )
-    }));
+import { Section } from '../../Section';
+import { GradientText } from '../../GradientText';
+import { SkillTree } from './SkillTree';
+
+export const Skills = async () => {
+    const t = await getTranslations('skills');
 
     return (
         <Section id="skills" className="space-y-10">
-            <AnimatedCardsHover items={skillCards} className="grid-cols-3 md:grid-cols-4 lg:grid-cols-10" />
+            <GradientText text={t('title')} />
+            <SkillTree />
         </Section>
     );
 };

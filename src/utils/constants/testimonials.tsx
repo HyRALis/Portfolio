@@ -6,6 +6,45 @@ import filip from '@/app/images/filip.jpg';
 import kiko from '@/app/images/kiko.jpg';
 import slovic from '@/app/images/slovic.jpg';
 
+export interface TestimonialItemMeta {
+    key: 'slovic' | 'filip' | 'kiko' | 'anastasija' | 'andrej' | 'djina';
+    name: string;
+    src: string;
+}
+
+export const testimonialList: TestimonialItemMeta[] = [
+    {
+        key: 'slovic',
+        name: 'Petar Slovic',
+        src: slovic.src
+    },
+    {
+        key: 'filip',
+        name: 'Filip Koteski',
+        src: filip.src
+    },
+    {
+        key: 'kiko',
+        name: 'Kristijan Jovanovski',
+        src: kiko.src
+    },
+    {
+        key: 'anastasija',
+        name: 'Anastasija Gjeorgieva',
+        src: anastasija.src
+    },
+    {
+        key: 'andrej',
+        name: 'Andrej Naumovski',
+        src: andrej.src
+    },
+    {
+        key: 'djina',
+        name: 'Djina Naumovski',
+        src: djina.src
+    }
+];
+
 export const testimonials: Testimonial[] = [
     {
         quote: 'I had the pleasure of working with Petar on a large and challenging project. Petar was our frontend engineer, and his expertise in TypeScript and Next.js really stood out. We worked in an NX monorepo setup, and Petar consistently delivered high-quality, reliable code. I was particularly impressed with how he built complex features like a real-time chat system and health metrics widgets, these were not easy tasks, but he handled them with skill and efficiency. What I appreciated most about Petar was his ability to tackle complicated problems, communicate clearly with the team, and deliver great results. He’s a strong developer and a great teammate. I’d happily recommend him for any frontend role - he’s a real asset to any team.',
