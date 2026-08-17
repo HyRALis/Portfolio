@@ -48,56 +48,6 @@ export const skillTreeSections: SkillTreeSection[] = [
         accentColor: '#818cf8',
         roots: [
             {
-                id: 'html',
-                title: 'HTML',
-                icon: <Html svgProps={ICON_SIZE} />,
-                years: 6,
-                maxYears: MAX_YEARS,
-                color: '#E34F26'
-            },
-            {
-                id: 'css',
-                title: 'CSS',
-                icon: <Css svgProps={ICON_SIZE} />,
-                years: 6,
-                maxYears: MAX_YEARS,
-                color: '#1572B6',
-                children: [
-                    {
-                        id: 'tailwind',
-                        title: 'Tailwind',
-                        icon: <Tailwind svgProps={ICON_SIZE} />,
-                        years: 3,
-                        maxYears: MAX_YEARS,
-                        color: '#06B6D4'
-                    },
-                    {
-                        id: 'sass',
-                        title: 'Sass',
-                        icon: <Sass svgProps={ICON_SIZE} />,
-                        years: 2,
-                        maxYears: MAX_YEARS,
-                        color: '#CC6699'
-                    },
-                    {
-                        id: 'bootstrap',
-                        title: 'Bootstrap',
-                        icon: <Bootstrap svgProps={ICON_SIZE} />,
-                        years: 3,
-                        maxYears: MAX_YEARS,
-                        color: '#7952B3'
-                    },
-                    {
-                        id: 'chakra-ui',
-                        title: 'Chakra UI',
-                        icon: <ChakraUi svgProps={ICON_SIZE} />,
-                        years: 3,
-                        maxYears: MAX_YEARS,
-                        color: '#319795'
-                    }
-                ]
-            },
-            {
                 id: 'javascript',
                 title: 'JavaScript',
                 icon: <JavaScript svgProps={ICON_SIZE} />,
@@ -176,6 +126,56 @@ export const skillTreeSections: SkillTreeSection[] = [
                         color: '#0EA5E9'
                     }
                 ]
+            },
+            {
+                id: 'css',
+                title: 'CSS',
+                icon: <Css svgProps={ICON_SIZE} />,
+                years: 6,
+                maxYears: MAX_YEARS,
+                color: '#1572B6',
+                children: [
+                    {
+                        id: 'tailwind',
+                        title: 'Tailwind',
+                        icon: <Tailwind svgProps={ICON_SIZE} />,
+                        years: 3,
+                        maxYears: MAX_YEARS,
+                        color: '#06B6D4'
+                    },
+                    {
+                        id: 'sass',
+                        title: 'Sass',
+                        icon: <Sass svgProps={ICON_SIZE} />,
+                        years: 2,
+                        maxYears: MAX_YEARS,
+                        color: '#CC6699'
+                    },
+                    {
+                        id: 'bootstrap',
+                        title: 'Bootstrap',
+                        icon: <Bootstrap svgProps={ICON_SIZE} />,
+                        years: 3,
+                        maxYears: MAX_YEARS,
+                        color: '#7952B3'
+                    },
+                    {
+                        id: 'chakra-ui',
+                        title: 'Chakra UI',
+                        icon: <ChakraUi svgProps={ICON_SIZE} />,
+                        years: 3,
+                        maxYears: MAX_YEARS,
+                        color: '#319795'
+                    }
+                ]
+            },
+            {
+                id: 'html',
+                title: 'HTML',
+                icon: <Html svgProps={ICON_SIZE} />,
+                years: 6,
+                maxYears: MAX_YEARS,
+                color: '#E34F26'
             }
         ]
     },
