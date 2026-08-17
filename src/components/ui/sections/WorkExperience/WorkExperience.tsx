@@ -11,6 +11,15 @@ export const WorkExperience = async () => {
 
     const localizedExperience = [
         {
+            title: t('softwareYard.title'),
+            content: (
+                <WorkExperienceCard
+                    header={t('softwareYard.date')}
+                    items={t.raw('softwareYard.points')}
+                />
+            )
+        },
+        {
             title: t('quantox.title'),
             content: (
                 <WorkExperienceCard
