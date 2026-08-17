@@ -1,7 +1,7 @@
 'use client';
-import { useRef, useState } from 'react';
+import { useState } from 'react';
 import Link from 'next/link';
-import { AnimatePresence, MotionValue, motion, useMotionValue, useSpring, useTransform } from 'framer-motion';
+import { AnimatePresence, motion } from 'framer-motion';
 
 import { cn } from '@/utils/twMerge';
 
@@ -56,80 +56,37 @@ const FloatingDockDesktop = ({
     items: { title: string; icon: React.ReactNode; href: string }[];
     className?: string;
 }) => {
-    const mouseX = useMotionValue(Infinity);
     return (
-        <motion.div
-            onMouseMove={(e) => mouseX.set(e.screenY)}
-            onMouseLeave={() => mouseX.set(Infinity)}
+        <div
             className={cn(
                 'fixed z-[9999] bottom-10 left-10 h-max hidden md:flex md:flex-col gap-4 rounded-full bg-gray-50/50 dark:bg-neutral-900/50 backdrop-blur-md border border-gray-200 dark:border-neutral-800 shadow-xl px-3 py-4',
                 className
             )}
         >
             {items.map((item) => (
-                <IconContainer mouseX={mouseX} key={item.title} {...item} />
+                <IconContainer key={item.title} {...item} />
             ))}
-        </motion.div>
+        </div>
     );
 };
 
 function IconContainer({
-    mouseX,
     title,
     icon,
     href
 }: {
-    mouseX: MotionValue;
     title: string;
     icon: React.ReactNode;
     href: string;
 }) {
-    const ref = useRef<HTMLDivElement>(null);
-
-    const distance = useTransform(mouseX, (val) => {
-        const bounds = ref.current?.getBoundingClientRect() ?? { y: 0, height: 0 };
-
-        return val - bounds.y - bounds.height - 100;
-    });
-
-    const widthTransform = useTransform(distance, [-150, 0, 150], [40, 80, 40]);
-    const heightTransform = useTransform(distance, [-150, 0, 150], [40, 80, 40]);
-
-    const widthTransformIcon = useTransform(distance, [-150, 0, 150], [20, 40, 20]);
-    const heightTransformIcon = useTransform(distance, [-150, 0, 150], [20, 40, 20]);
-
-    const width = useSpring(widthTransform, {
-        mass: 0.1,
-        stiffness: 150,
-        damping: 12
-    });
-    const height = useSpring(heightTransform, {
-        mass: 0.1,
-        stiffness: 150,
-        damping: 12
-    });
-
-    const widthIcon = useSpring(widthTransformIcon, {
-        mass: 0.1,
-        stiffness: 150,
-        damping: 12
-    });
-    const heightIcon = useSpring(heightTransformIcon, {
-        mass: 0.1,
-        stiffness: 150,
-        damping: 12
-    });
-
     const [hovered, setHovered] = useState(false);
 
     return (
         <Link href={href} aria-label={title}>
-            <motion.div
-                ref={ref}
-                style={{ width, height }}
+            <div
                 onMouseEnter={() => setHovered(true)}
                 onMouseLeave={() => setHovered(false)}
-                className="aspect-square rounded-full bg-gray-200 dark:bg-neutral-800 flex items-center justify-center relative"
+                className="w-10 h-10 aspect-square rounded-full bg-gray-200 dark:bg-neutral-800 flex items-center justify-center relative transition-colors hover:bg-gray-300 dark:hover:bg-neutral-700"
             >
                 <AnimatePresence>
                     {hovered && (
@@ -137,19 +94,16 @@ function IconContainer({
                             initial={{ opacity: 0, x: 10, y: '-50%' }}
                             animate={{ opacity: 1, x: 0, y: '-50%' }}
                             exit={{ opacity: 0, x: 2, y: '-50%' }}
-                            className="px-2 py-0.5 whitespace-pre rounded-md bg-gray-100 border dark:bg-neutral-800 dark:border-neutral-900 dark:text-white border-gray-200 text-neutral-700 absolute left-1/2 -translate-x-1/2 -top-8 w-fit text-xs"
+                            className="px-2 py-0.5 whitespace-pre rounded-md bg-gray-100 border dark:bg-neutral-800 dark:border-neutral-900 dark:text-white border-gray-200 text-neutral-700 absolute left-14 top-1/2 -translate-y-1/2 w-fit text-xs pointer-events-none"
                         >
                             {title}
                         </motion.div>
                     )}
                 </AnimatePresence>
-                <motion.div
-                    style={{ width: widthIcon, height: heightIcon }}
-                    className="flex items-center justify-center"
-                >
+                <div className="w-5 h-5 flex items-center justify-center text-neutral-500 dark:text-neutral-300">
                     {icon}
-                </motion.div>
-            </motion.div>
+                </div>
+            </div>
         </Link>
     );
 }
