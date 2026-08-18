@@ -19,28 +19,34 @@ export const Navbar = () => {
     ], [t]);
 
     useEffect(() => {
+        let ticking = false;
+
         const handleScroll = () => {
-            const sections = navItems.map((item) => item.link.replace('#', ''));
-            let current = activeSection;
+            if (!ticking) {
+                window.requestAnimationFrame(() => {
+                    const sections = navItems.map((item) => item.link.replace('#', ''));
+                    let current = activeSection;
 
-            for (const section of sections) {
-                const element = document.getElementById(section);
-                if (element) {
-                    const rect = element.getBoundingClientRect();
-                    // If the section's top is past half of the viewport height, it becomes active.
-                    // This creates a smooth transition between sections.
-                    if (rect.top <= window.innerHeight / 2 && rect.bottom >= window.innerHeight / 2) {
-                        current = `#${section}`;
+                    for (const section of sections) {
+                        const element = document.getElementById(section);
+                        if (element) {
+                            const rect = element.getBoundingClientRect();
+                            if (rect.top <= window.innerHeight / 2 && rect.bottom >= window.innerHeight / 2) {
+                                current = `#${section}`;
+                            }
+                        }
                     }
-                }
-            }
 
-            if (window.scrollY < 100) {
-                current = '#home'; // Default to home at very top
-            }
+                    if (window.scrollY < 100) {
+                        current = '#home'; // Default to home at very top
+                    }
 
-            if (current !== activeSection) {
-                setActiveSection(current);
+                    if (current !== activeSection) {
+                        setActiveSection(current);
+                    }
+                    ticking = false;
+                });
+                ticking = true;
             }
         };
 

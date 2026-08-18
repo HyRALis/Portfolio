@@ -15,12 +15,12 @@ export const HeroSection = async () => {
     const t = await getTranslations('hero');
 
     return (
-        <div className="relative w-screen min-h-screen lg:h-screen">
+        <div className="relative w-screen min-h-screen md:h-screen">
             <div className="absolute top-0 left-0 w-screen h-screen flex justify-center items-center -z-20">
                 <Image
                     src={heroImage}
                     alt=""
-                    quality={100}
+                    quality={80}
                     fill
                     priority
                     sizes="100vw"
@@ -59,6 +59,9 @@ export const HeroSection = async () => {
                                     src={heroWorkingImage}
                                     alt="Petar Trajanoski - Full Stack Developer"
                                     fill
+                                    priority
+                                    quality={85}
+                                    sizes="(max-width: 768px) 15rem, 37rem"
                                     style={{ objectFit: 'fill' }}
                                     placeholder="blur"
                                     className="opacity-90 hover:opacity-100 transition-opacity duration-300"

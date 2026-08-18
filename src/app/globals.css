@@ -19,6 +19,12 @@ body {
   background: var(--background);
 }
 
+@media (min-width: 768px) and (max-width: 842px) {
+    .container {
+        max-width: 694px;
+    }
+}
+
 @media (min-width: 1024px) and (max-width: 1100px) {
     .container {
         max-width: 948px;

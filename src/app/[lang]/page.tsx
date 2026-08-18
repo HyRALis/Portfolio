@@ -15,15 +15,30 @@ export default async function Home({ params }: { params: Promise<{ lang: string 
         '@graph': [
             {
                 '@type': 'WebSite',
+                '@id': 'https://petartrajanoski.me/#website',
                 name: 'Petar Trajanoski',
-                url: 'https://petartrajanoski.me'
+                url: 'https://petartrajanoski.me',
+                inLanguage: resolvedParams.lang
             },
             {
                 '@type': 'Person',
+                '@id': 'https://petartrajanoski.me/#person',
                 name: 'Petar Trajanoski',
-                url: 'https://petartrajanoski.me',
+                url: `https://petartrajanoski.me/${resolvedParams.lang}`,
+                image: 'https://petartrajanoski.me/opengraph-image',
                 jobTitle: 'Full Stack Developer',
-                email: 'petar.trajanoski.pt@gmail.com',
+                email: 'mailto:petar.trajanoski.pt@gmail.com',
+                knowsAbout: [
+                    'React',
+                    'Next.js',
+                    'Vue.js',
+                    'Go',
+                    'Golang',
+                    'TypeScript',
+                    'JavaScript',
+                    'Tailwind CSS',
+                    'Node.js'
+                ],
                 sameAs: [
                     'https://www.linkedin.com/in/petar-trajanoski-464aa8b6/',
                     'https://github.com/HyRALis',

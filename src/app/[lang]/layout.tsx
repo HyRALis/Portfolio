@@ -37,6 +37,14 @@ export async function generateMetadata({ params }: { params: Promise<{ lang: str
             template: '%s | Petar Trajanoski'
         },
         description,
+        alternates: {
+            canonical: `https://petartrajanoski.me/${lang}`,
+            languages: {
+                en: 'https://petartrajanoski.me/en',
+                mk: 'https://petartrajanoski.me/mk',
+                'x-default': 'https://petartrajanoski.me/en'
+            }
+        },
         keywords: [
             'Petar Trajanoski',
             'Петар Трајаноски',
