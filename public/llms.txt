@@ -1,0 +1,30 @@
+﻿# Petar Trajanoski — Full Stack Developer
+
+> Petar Trajanoski is a Full Stack Developer specializing in building high-performance, scalable web applications using React, Next.js, Vue.js, Go (Golang), and TypeScript.
+
+## Personal Information
+- **Full Name**: Petar Trajanoski (Петар Трајаноски)
+- **Role**: Full Stack Developer / Software Engineer
+- **Website**: https://petartrajanoski.me
+- **Email**: petar.trajanoski.pt@gmail.com
+- **LinkedIn**: https://www.linkedin.com/in/petar-trajanoski-464aa8b6/
+- **GitHub**: https://github.com/HyRALis
+
+## Technical Core Competencies
+- **Frontend**: React, Next.js (App Router, Server Components), Vue.js, TypeScript, JavaScript (ESNext), Tailwind CSS, Framer Motion, HTML5/CSS3.
+- **Backend & APIs**: Go (Golang), Node.js, RESTful APIs, GraphQL, Microservices architecture.
+- **Databases & DevOps**: PostgreSQL, MySQL, Redis, Docker, Git, CI/CD pipelines, Vercel.
+- **Optimization & SEO**: Core Web Vitals, Performance Optimization, Internationalization (i18n), Search Engine Optimization.
+
+## Professional Experience
+- **Software Developer** at SoftwareYard (Full-stack web application development, microservices, and modern UI architectures).
+- **Software Engineer** at Quantox Technology (Enterprise client systems, scalable frontend and backend solutions).
+- **Software Developer** at EmbedSocial (SaaS widgets, social media integrations, high-traffic web components).
+- **Frontend / Full Stack Developer** at CodeConnectors (Custom client web portals, reactive interfaces).
+
+## Key Links & Portfolio Sections
+- [Portfolio Homepage (English)](https://petartrajanoski.me/en): Overview of projects, skills, and interactive developer profile.
+- [Portfolio Homepage (Macedonian)](https://petartrajanoski.me/mk): Македонска верзија на портфолиото.
+- [Work Experience & Timeline](https://petartrajanoski.me/en#experience): Detailed breakdown of roles, tech stacks, and career milestones.
+- [Skills Tree](https://petartrajanoski.me/en#skills): Comprehensive interactive skill roadmap covering frontend, backend, and tools.
+- [Testimonials & Recommendations](https://petartrajanoski.me/en#testimonials): Endorsements and feedback from colleagues and clients.
