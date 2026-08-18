@@ -61,7 +61,7 @@ export const HeroSection = async () => {
                                     fill
                                     priority
                                     quality={85}
-                                    sizes="(max-width: 768px) 15rem, 37rem"
+                                    sizes="(max-width: 640px) 240px, (max-width: 768px) 320px, (max-width: 1024px) 480px, 592px"
                                     style={{ objectFit: 'fill' }}
                                     placeholder="blur"
                                     className="opacity-90 hover:opacity-100 transition-opacity duration-300"

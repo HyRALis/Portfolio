@@ -117,8 +117,10 @@ export const TestimonialCard = (item: Testimonial) => {
                     <Image
                         src={item.src}
                         alt={item.name}
-                        width={50}
-                        height={50}
+                        width={48}
+                        height={48}
+                        sizes="48px"
+                        quality={80}
                         draggable={false}
                         className="h-12 w-12 rounded-full object-cover object-center"
                     />
