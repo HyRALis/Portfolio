@@ -32,7 +32,7 @@ const FloatingDockMobile = ({
     return (
         <div
             className={cn(
-                'fixed bottom-6 left-1/2 -translate-x-1/2 flex md:hidden flex-row gap-4 rounded-full bg-gray-50/50 dark:bg-neutral-900/50 backdrop-blur-md border border-gray-200 dark:border-neutral-800 shadow-xl px-4 py-3',
+                'fixed z-[9999] bottom-6 left-1/2 -translate-x-1/2 flex md:hidden flex-row gap-4 rounded-full bg-gray-50/50 dark:bg-neutral-900/50 backdrop-blur-md border border-gray-200 dark:border-neutral-800 shadow-xl px-4 py-3',
                 className
             )}
         >

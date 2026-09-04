@@ -12,7 +12,7 @@ export const Skills = async () => {
     return (
         <Section id="skills" className="space-y-10">
             <GradientText text={t('title')} />
-            <SkillTree />
+            <SkillTree label={t('title')} />
         </Section>
     );
 };

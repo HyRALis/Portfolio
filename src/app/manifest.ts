@@ -5,7 +5,7 @@ export default function manifest(): MetadataRoute.Manifest {
         name: 'Petar Trajanoski — Full Stack Developer',
         short_name: 'Petar T.',
         description:
-            'Full stack developer specializing in React, Next.js, Vue.js, GO and TypeScript.',
+            'Full-stack developer specializing in React, Next.js, Vue.js, Go, and TypeScript.',
         start_url: '/',
         display: 'standalone',
         background_color: '#0a0a0a',

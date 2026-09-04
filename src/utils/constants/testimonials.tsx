@@ -7,7 +7,7 @@ import ivana_georgieva_davcev from '@/app/images/ivana_georgieva_davcev.jpg';
 import slovic from '@/app/images/slovic.jpg';
 
 export interface TestimonialItemMeta {
-    key: 'slovic' | 'filip' | 'kiko' | 'ivana' | 'anastasija' | 'andrej' | 'djina' | 'ivana_georgieva_davcev';
+    key: 'slovic' | 'filip' | 'kiko' | 'anastasija' | 'andrej' | 'djina' | 'ivana_georgieva_davcev';
     name: string;
     src: string;
 }

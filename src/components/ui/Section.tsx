@@ -7,5 +7,9 @@ export interface SectionProps extends PropsWithChildren {
 }
 
 export const Section: React.FC<SectionProps> = ({ className, id, children }) => {
-    return <section id={id} className={cn('container mx-auto px-10 md:px-5 sm:px-0', className)}>{children}</section>;
+    return (
+        <section id={id} className={cn('container mx-auto scroll-mt-24 px-5 sm:px-6 lg:px-8', className)}>
+            {children}
+        </section>
+    );
 };

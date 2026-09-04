@@ -11,10 +11,9 @@
 - **GitHub**: https://github.com/HyRALis
 
 ## Technical Core Competencies
-- **Frontend**: React, Next.js (App Router, Server Components), Vue.js, TypeScript, JavaScript (ESNext), Tailwind CSS, Framer Motion, HTML5/CSS3.
-- **Backend & APIs**: Go (Golang), Node.js, RESTful APIs, GraphQL, Microservices architecture.
-- **Databases & DevOps**: PostgreSQL, MySQL, Redis, Docker, Git, CI/CD pipelines, Vercel.
-- **Optimization & SEO**: Core Web Vitals, Performance Optimization, Internationalization (i18n), Search Engine Optimization.
+- **Frontend**: React, Next.js, Vue.js, Nuxt.js, Redux, Vuex, TypeScript, JavaScript, NX, Tailwind CSS, Sass, Bootstrap, Chakra UI, HTML, and CSS.
+- **Backend & APIs**: Go (Golang), Gin, and REST APIs.
+- **Databases**: SQL and PostgreSQL.
 
 ## Professional Experience
 - **Software Developer** at SoftwareYard (Full-stack web application development, microservices, and modern UI architectures).
@@ -23,8 +22,8 @@
 - **Frontend / Full Stack Developer** at CodeConnectors (Custom client web portals, reactive interfaces).
 
 ## Key Links & Portfolio Sections
-- [Portfolio Homepage (English)](https://petartrajanoski.me/en): Overview of projects, skills, and interactive developer profile.
+- [Portfolio Homepage (English)](https://petartrajanoski.me/en): Overview of skills, professional experience, and recommendations.
 - [Portfolio Homepage (Macedonian)](https://petartrajanoski.me/mk): Македонска верзија на портфолиото.
 - [Work Experience & Timeline](https://petartrajanoski.me/en#experience): Detailed breakdown of roles, tech stacks, and career milestones.
-- [Skills Tree](https://petartrajanoski.me/en#skills): Comprehensive interactive skill roadmap covering frontend, backend, and tools.
+- [Skills Tree](https://petartrajanoski.me/en#skills): Skill roadmap covering frontend and backend technologies.
 - [Testimonials & Recommendations](https://petartrajanoski.me/en#testimonials): Endorsements and feedback from colleagues and clients.

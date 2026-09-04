@@ -37,7 +37,8 @@ export default async function Home({ params }: { params: Promise<{ lang: string 
                     'TypeScript',
                     'JavaScript',
                     'Tailwind CSS',
-                    'Node.js'
+                    'PostgreSQL',
+                    'REST APIs'
                 ],
                 sameAs: [
                     'https://www.linkedin.com/in/petar-trajanoski-464aa8b6/',
@@ -60,7 +61,6 @@ export default async function Home({ params }: { params: Promise<{ lang: string 
                 <FloatingDock
                     items={floatingDockItems}
                     desktopClassName="z-[9999] min-h-max max-h-max max-w-[76px]"
-                    mobileClassName="z-[9999]"
                 />
             </main>
         </>

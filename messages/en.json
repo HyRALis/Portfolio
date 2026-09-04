@@ -2,8 +2,9 @@
   "hero": {
     "subtext": "Building digital experiences that ",
     "words": ["spark joy", "improve lives", "enhance productivity", "make a difference"],
-    "description": "Hey, I'm Petar Trajanoski 👋. I'm a full stack developer who loves crafting beautiful, modern, and high-performance applications. When I'm not tweaking animations or pushing pixels, you'll find me exploring new tech stacks. Let's build something awesome together!",
-    "contact": "Contact Me →"
+    "description": "Hey, I'm Petar Trajanoski 👋. I'm a full-stack developer who loves crafting beautiful, modern, high-performance applications. When I'm not refining animations or polishing interfaces, you'll find me exploring new technologies. Let's build something meaningful together!",
+    "contact": "Contact Me →",
+    "socialLinks": "Social links"
   },
   "skills": {
     "title": "Skills"
@@ -12,7 +13,15 @@
     "home": "Home",
     "skills": "Skills",
     "experience": "Experience",
-    "testimonials": "Testimonials"
+    "testimonials": "Testimonials",
+    "mainLabel": "Main navigation",
+    "mobileLabel": "Mobile navigation",
+    "openMenu": "Open menu",
+    "closeMenu": "Close menu"
+  },
+  "language": {
+    "switchToEnglish": "Switch to English",
+    "switchToMacedonian": "Switch to Macedonian"
   },
   "workExperience": {
     "title": "Work Experience",
@@ -30,19 +39,19 @@
       ]
     },
     "quantox": {
-      "title": "Quantox technologies",
+      "title": "Quantox Technology",
       "date": "May 2022 - January 2025",
       "points": [
-        "Building enterprise level projects from social media sites to complex nation wide healthcare systems",
-        "Utilize atomic design principles.",
-        "Work with React.js ecosystem including Next.js.",
+        "Built enterprise-level products ranging from social media platforms to complex nationwide healthcare systems.",
+        "Applied atomic design principles to create consistent, scalable interfaces.",
+        "Worked across the React.js ecosystem, including Next.js.",
         "Collaborated closely with the back-end developers to integrate API calls into the front-end codebase.",
         "Created UI components with reusable code for a better user experience.",
-        "Learned new front-end programming languages and methodologies to perform tasks."
+        "Adopted new frontend technologies and methodologies to meet project requirements."
       ]
     },
     "embedSocial": {
-      "title": "Embed Social",
+      "title": "EmbedSocial",
       "date": "March 2021 - May 2022",
       "points": [
         "Implemented a link in bio page builder with Vue.js as a solo front-end developer in 3 months, including but not limited to component and frontend architecture design and implementation, mentorship of other developers, and some team leading responsibilities",
@@ -51,17 +60,21 @@
       ]
     },
     "codeConnectors": {
-      "title": "The code connectors",
-      "date": "March 2021 - May 2022",
-      "points": [
-        "Built and designed multiple projects from scratch. From website for small businesses to complex web applications.",
-        "Designed the frontend architecture and implemented components for a better user experience.",
-        "Worked with React, Vue.js, and Livewire to build websites and web applications depending on the client needs and requirements."
-      ]
+        "title": "The Code Connectors",
+        "date": "September 2020 - March 2021",
+        "points": [
+            "Built and designed multiple projects from scratch. From website for small businesses to complex web applications.",
+            "Designed the frontend architecture and implemented components for a better user experience.",
+            "Worked with React, Vue.js, and Livewire to build websites and web applications depending on the client needs and requirements."
+        ]
     }
   },
   "testimonials": {
     "title": "Testimonials",
+    "carouselLabel": "Professional recommendations",
+    "previous": "Previous recommendations",
+    "next": "Next recommendations",
+    "position": "Recommendation {current} of {total}",
     "items": {
       "slovic": {
         "quote": "I had the pleasure of working with Petar on a large and challenging project. Petar was our frontend engineer, and his expertise in TypeScript and Next.js really stood out. We worked in an NX monorepo setup, and Petar consistently delivered high-quality, reliable code. I was particularly impressed with how he built complex features like a real-time chat system and health metrics widgets, these were not easy tasks, but he handled them with skill and efficiency. What I appreciated most about Petar was his ability to tackle complicated problems, communicate clearly with the team, and deliver great results. He’s a strong developer and a great teammate. I’d happily recommend him for any frontend role - he’s a real asset to any team.",

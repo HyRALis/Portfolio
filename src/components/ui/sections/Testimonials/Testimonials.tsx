@@ -5,6 +5,7 @@ import { testimonialList } from '@/utils/constants/testimonials';
 import { Section } from '../../Section';
 import { GradientText } from '../../GradientText';
 import { InfiniteMovingCards } from './InfiniteMovingCards';
+import { TestimonialCarousel } from './TestimonialCarousel';
 
 export const Testimonials = async () => {
     const t = await getTranslations('testimonials');
@@ -19,8 +20,12 @@ export const Testimonials = async () => {
     return (
         <Section id="testimonials" className="space-y-10">
             <GradientText text={t('title')} />
-            {/* <AnimatedTestimonials testimonials={localizedTestimonials} /> */}
-            <InfiniteMovingCards items={localizedTestimonials} speed="slow" />
+            <div className="md:hidden">
+                <TestimonialCarousel items={localizedTestimonials} />
+            </div>
+            <div className="hidden md:block">
+                <InfiniteMovingCards items={localizedTestimonials} speed="slow" />
+            </div>
         </Section>
     );
 };

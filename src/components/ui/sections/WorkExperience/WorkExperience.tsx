@@ -51,16 +51,6 @@ export const WorkExperience = async () => {
     return (
         <Section id="experience" className="space-y-10">
             <GradientText text={t('title')} />
-            <div className="w-full bg-white dark:bg-neutral-950 flex md:hidden flex-col gap-4 justify-center items-center">
-                {localizedExperience.map((item) => (
-                    <div key={item.title} className="flex flex-col space-y-4">
-                        <h3 className="text-xl md:pl-20 md:text-5xl font-bold text-neutral-500 dark:text-neutral-500 ">
-                            {item.title}
-                        </h3>
-                        {item.content}
-                    </div>
-                ))}
-            </div>
             <Timeline data={localizedExperience} />
         </Section>
     );

@@ -28,7 +28,7 @@ export async function generateMetadata({ params }: { params: Promise<{ lang: str
     const title = isMk ? 'Петар Трајаноски — Full Stack Програмер' : 'Petar Trajanoski — Full Stack Developer Portfolio';
     const description = isMk
         ? 'Full stack програмер специјализиран за React, Next.js, Vue.js, GO и TypeScript. Истражете ги моите проекти, вештини и професионално искуство во градењето на модерни веб апликации.'
-        : 'Full stack developer specializing in React, Next.js, Vue.js, GO and TypeScript. Explore my projects, skills, and professional experience building modern web applications.';
+        : 'Full-stack developer specializing in React, Next.js, Vue.js, Go, and TypeScript. Explore my skills, professional experience, and recommendations.';
 
     return {
         metadataBase: new URL('https://petartrajanoski.me'),
@@ -53,7 +53,7 @@ export async function generateMetadata({ params }: { params: Promise<{ lang: str
             'React',
             'Next.js',
             'Vue.js',
-            'GO',
+            'Go',
             'Golang',
             'TypeScript',
             'JavaScript',

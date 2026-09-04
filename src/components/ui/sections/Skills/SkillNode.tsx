@@ -28,24 +28,15 @@ export const SkillNode: React.FC<SkillNodeProps> = ({ node, depth, index }) => {
             }}
             whileHover={{ scale: 1.08 }}
         >
-            {/* Level Badge */}
             <div className="skill-node-level-badge">
                 <span className="skill-node-level-text">Lv.{node.years}</span>
             </div>
-
-            {/* Glow ring */}
-            <div className="skill-node-glow" />
-
-            {/* Icon */}
-            <div className="skill-node-icon">
+            <div className="skill-node-glow" aria-hidden="true" />
+            <div className="skill-node-icon" aria-hidden="true">
                 {node.icon}
             </div>
-
-            {/* Name */}
             <div className="skill-node-name">{node.title}</div>
-
-            {/* XP Bar */}
-            <div className="skill-node-xp-track">
+            <div className="skill-node-xp-track" aria-hidden="true">
                 <motion.div
                     className="skill-node-xp-fill"
                     initial={{ width: 0 }}
@@ -58,8 +49,6 @@ export const SkillNode: React.FC<SkillNodeProps> = ({ node, depth, index }) => {
                     }}
                 />
             </div>
-
-            {/* Years label */}
             <div className="skill-node-years">
                 {node.years}/{node.maxYears} yr
             </div>
