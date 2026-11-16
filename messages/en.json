@@ -27,7 +27,7 @@
     "title": "Work Experience",
     "softwareYard": {
       "title": "Software Yard",
-      "date": "October 2025 - Present",
+      "date": "February 2025 - Present",
       "points": [
         "Lead the end-to-end development of multiple greenfield projects, defining scalable frontend architectures and folder structures based on atomic design principles.",
         "Engineered a high-scale event-driven notification system using Golang, RabbitMQ, and WebSockets, capable of serving thousands of users with real-time updates.",
